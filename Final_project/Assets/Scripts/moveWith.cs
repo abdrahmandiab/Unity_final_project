@@ -19,9 +19,7 @@ public class moveWith : MonoBehaviour
      temp.y = myTransform.y;
      temp.z = temp.z + myTransform.z;
      // Assign value to Camera position
-     transform.position = temp;
-     transform.RotateAround(player.transform.position, Vector3.up, player.transform.rotation.y-transform.rotation.y);
 
-
+    transform.position = temp;
     }
 }
