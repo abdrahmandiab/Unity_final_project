@@ -3,7 +3,7 @@ using UnityEngine;
 public class Sniper : MonoBehaviour
 {
     
-    public float damage = 60f;
+    
     // private float range = 10000f;
     public float fireRate = 0.75f;
     private float RateSeconds;

@@ -3,14 +3,15 @@ using UnityEngine;
 
 public class bulletGoWeeRifle : MonoBehaviour
 {
+    public float speed = 70f;
+    public float damage = 10f;
+    public float range = 65f;
+    
     [HideInInspector] new public Rigidbody rigidbody;
-    public bool useGravity = true;
+    private bool useGravity = true;
     private float despawnTime = 3f;
     private float spawnTime= 0f;
-    public float speed = 100f;
     private Vector3 rate;
-
-    public float range= 65; // Interpretted as 6.5*2=13 world units, instead of 65
     void Start(){
         rigidbody = GetComponent<Rigidbody>();
         rate = transform.forward*speed*Time.deltaTime;
@@ -33,6 +34,9 @@ public class bulletGoWeeRifle : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            //Call something like:
+            // other.gameObject.triggerDamage(damage);
+            //here...
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

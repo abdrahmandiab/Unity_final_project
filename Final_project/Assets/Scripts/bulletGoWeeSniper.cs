@@ -3,11 +3,14 @@ using UnityEngine;
 
 public class bulletGoWeeSniper : MonoBehaviour
 {
+    public float speed = 100f;
+    public float damage = 85f;
+    public float range = 100f;
+    
     [HideInInspector] new public Rigidbody rigidbody;
-    public bool useGravity = true;
+    private bool useGravity = true;
     private float despawnTime = 3f;
     private float spawnTime= 0f;
-    public float speed = 100f;
     private Vector3 rate;
     void Start(){
         rigidbody = GetComponent<Rigidbody>();
@@ -31,6 +34,9 @@ public class bulletGoWeeSniper : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            //Call something like:
+            // other.gameObject.triggerDamage(damage);
+            //here...
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
