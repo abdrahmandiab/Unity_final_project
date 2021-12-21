@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - Enemy
   - Terrain
+  - Floor
+  - Wall
   layers:
   - Default
   - TransparentFX

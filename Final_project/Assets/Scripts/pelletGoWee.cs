@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class pelletGoWee : MonoBehaviour
 {
-    public float speed = 50f;
+    public float speed = 10f;
     public float damage = 70f;
     public float range = 30f;
     
