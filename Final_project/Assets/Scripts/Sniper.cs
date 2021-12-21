@@ -4,16 +4,24 @@ public class Sniper : MonoBehaviour
 {
     
     public float damage = 60f;
-    public float range = 100f;
+    // private float range = 10000f;
     public float fireRate = 0.75f;
     private float RateSeconds;
     private float lastFire;
-    //public Camera fpscam;
+    public int ammoCount = 6;
+    // public GameObject fps;
     public GameObject bulletPrefab;
      
-
+    void Start(){
+        // // Vector3 screenPos = new Vector3(Screen.width /2.0f, Screen.height/2.0f,0);
+        // // Vector3 worldPos = ScreenToWorldPoint(screenPos);
+        // transform.LookAt(fps.transform.forward);
+        // transform.Rotate(-90,0,0);
+        // initPos();
+    }
     void Update()
     {
+
         RateSeconds = 1/fireRate;
         if (Input.GetMouseButtonDown(0)  ){
             if(Time.time-lastFire> RateSeconds){
@@ -26,6 +34,12 @@ public class Sniper : MonoBehaviour
         }
         
     }
+    // void initPos(){
+    //     RaycastHit hit;
+    //     if(Physics.Raycast(fps.transform.position,fps.transform.forward,out hit, range)){
+    //     Debug.Log(hit.transform.position.x);
+    //     }
+    // }
     
     void Shoot(){
         GameObject bulletObject = Instantiate(bulletPrefab);
