@@ -3114,3 +3114,248 @@ Received Import Request.
 Start importing Assets/Prefabs/GrenadeLauncher.prefab using Guid(5a5ca19b496d19548b53248763979a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf2a7125ca9ddabb0656ca61ba69c623') in 0.013013 seconds
   Import took 0.015784 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 140.901674 seconds.
+  path: Assets/Models/Legends/Loba
+  artifactKey: Guid(4fb906a95e96af34cb5c9ecfa4b06e56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba using Guid(4fb906a95e96af34cb5c9ecfa4b06e56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bdd1a5d88a7a2a69d1b8a9a0ddef06c') in 0.005935 seconds
+  Import took 0.007983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.097300 seconds.
+  path: Assets/Models/Legends/Loba/body_D.png
+  artifactKey: Guid(d44af7d93bf82a84fba92db21d50fc00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba/body_D.png using Guid(d44af7d93bf82a84fba92db21d50fc00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c778ca6eea48e929d78b1800f4f49755') in 0.041432 seconds
+  Import took 0.043513 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Models/Legends/Loba/body_S.png
+  artifactKey: Guid(1a94763adfcccda44ae48644dbfab1b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba/body_S.png using Guid(1a94763adfcccda44ae48644dbfab1b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e04c4020260acff62b902d2f508bdae') in 0.011300 seconds
+  Import took 0.013078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Models/Legends/Loba/face_S.png
+  artifactKey: Guid(35cfb4e6aad242340a072b69ed2b36d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba/face_S.png using Guid(35cfb4e6aad242340a072b69ed2b36d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c70cff178039ec156c61a68553cdba9') in 0.009024 seconds
+  Import took 0.010972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Models/Legends/Loba/hair_D.png
+  artifactKey: Guid(368183b8e8d01f548b82208daa3fae89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba/hair_D.png using Guid(368183b8e8d01f548b82208daa3fae89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c016740cfd42803c225ba285ebca8071') in 0.011214 seconds
+  Import took 0.013037 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Models/Legends/Loba/body_N.png
+  artifactKey: Guid(28ec4c2742053e046b40a42b76fae949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba/body_N.png using Guid(28ec4c2742053e046b40a42b76fae949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05866b305b7e177e9d13690288f53e54') in 0.015669 seconds
+  Import took 0.018294 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Models/Legends/Loba/Loba.fbx
+  artifactKey: Guid(a56d30639be096942948a71d76792572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba/Loba.fbx using Guid(a56d30639be096942948a71d76792572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bccd51038cff11740afcffddd0843feb') in 0.206613 seconds
+  Import took 0.209546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Models/Legends/Loba/gear_D.png
+  artifactKey: Guid(79b11b5485d5b0940abe0a30bc497336) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba/gear_D.png using Guid(79b11b5485d5b0940abe0a30bc497336) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '769a0bb43aff9e829402b7db8e22bb0f') in 0.009523 seconds
+  Import took 0.011437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Models/Legends/Loba/hair_Alpha.png
+  artifactKey: Guid(21031ab40bbab9346b4829e3656dbdde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba/hair_Alpha.png using Guid(21031ab40bbab9346b4829e3656dbdde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8640f1274fc3c95546000858cecfca20') in 0.008885 seconds
+  Import took 0.010715 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Models/Legends/Loba/face_D.png
+  artifactKey: Guid(21d329c117eee114187dd3f679515d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba/face_D.png using Guid(21d329c117eee114187dd3f679515d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5d9edf71150e12ad55cf9daf21ffc5c') in 0.009948 seconds
+  Import took 0.012004 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/Models/Legends/Loba/gear_S.png
+  artifactKey: Guid(b1a94bf56c4cd3148b8a10ce94620dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba/gear_S.png using Guid(b1a94bf56c4cd3148b8a10ce94620dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2007150368f241fb9358e44ebade1541') in 0.009549 seconds
+  Import took 0.011532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Models/Legends/Loba/hair_S.png
+  artifactKey: Guid(077b7172754525d4f98e02ce055bd2d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba/hair_S.png using Guid(077b7172754525d4f98e02ce055bd2d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afa1c1e91a894146410e29bc95b6e736') in 0.009739 seconds
+  Import took 0.011841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/Models/Legends/Loba/face_N.png
+  artifactKey: Guid(4a99646e09e6e88499258b0f37846e83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba/face_N.png using Guid(4a99646e09e6e88499258b0f37846e83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b233fd5bb6a3eb8f3a66d8d3f3cc23ad') in 0.010115 seconds
+  Import took 0.012041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/Models/Legends/Loba/gear_I.png
+  artifactKey: Guid(b5e3748b37696a84b8a2944b488eef87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba/gear_I.png using Guid(b5e3748b37696a84b8a2944b488eef87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b818740be39cabb3b84668667271b6e') in 0.008900 seconds
+  Import took 0.011113 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Models/Legends/Loba/gear_N.png
+  artifactKey: Guid(3556f1135ae11c64b98b30876be45d76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba/gear_N.png using Guid(3556f1135ae11c64b98b30876be45d76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bee77b070d619e99122d48b2e389299d') in 0.010566 seconds
+  Import took 0.012466 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Models/Legends/Loba/hair_N.png
+  artifactKey: Guid(8685b7a933b31e74b95e0e07baf4878f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Loba/hair_N.png using Guid(8685b7a933b31e74b95e0e07baf4878f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bc32ee3a1acd92aa7d5e162b2a2aab9') in 0.010411 seconds
+  Import took 0.012395 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 252.013972 seconds.
+  path: Assets/Models/Legends/Bangalore
+  artifactKey: Guid(cb038e59ce924f64a8e9b7bde2527098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Bangalore using Guid(cb038e59ce924f64a8e9b7bde2527098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '965e4a78fa2109a6d7f53c04f2bbd446') in 0.009584 seconds
+  Import took 0.011802 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.083669 seconds.
+  path: Assets/Models/Legends/Bangalore/Bangalore.fbx
+  artifactKey: Guid(18bce3eed4d402c48a082423824de36d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Legends/Bangalore/Bangalore.fbx using Guid(18bce3eed4d402c48a082423824de36d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fddd8e707a5edf545e6744dc91cd94a7') in 0.089549 seconds
+  Import took 0.092848 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000983 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.635 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1214 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.6 MB.
+System memory in use after: 91.4 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1997.
+Total: 1.834800 ms (FindLiveObjects: 0.185700 ms CreateObjectMapping: 0.030000 ms MarkObjects: 1.323300 ms  DeleteObjects: 0.295000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001035 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.621 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1213 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.6 MB.
+System memory in use after: 91.4 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1999.
+Total: 1.896300 ms (FindLiveObjects: 0.182700 ms CreateObjectMapping: 0.032600 ms MarkObjects: 1.305000 ms  DeleteObjects: 0.375100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001101 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.624 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1213 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.6 MB.
+System memory in use after: 91.4 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2002.
+Total: 1.975700 ms (FindLiveObjects: 0.205100 ms CreateObjectMapping: 0.029600 ms MarkObjects: 1.373500 ms  DeleteObjects: 0.366300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001150 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.611 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1213 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.7 MB.
+System memory in use after: 91.4 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2005.
+Total: 1.806100 ms (FindLiveObjects: 0.167000 ms CreateObjectMapping: 0.035300 ms MarkObjects: 1.265100 ms  DeleteObjects: 0.337900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 770.285104 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(81ef703c924f8f041bd4cfaa073968ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(81ef703c924f8f041bd4cfaa073968ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bf63fb10076b63ff0efd1056587a7f0') in 0.118517 seconds
+  Import took 0.123668 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
