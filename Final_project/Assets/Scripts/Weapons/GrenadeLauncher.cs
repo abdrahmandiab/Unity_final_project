@@ -67,29 +67,5 @@ public class GrenadeLauncher : MonoBehaviour
         GameObject bulletObject = Instantiate(bulletPrefab);
         bulletObject.transform.position = flashPoint.position;
         bulletObject.transform.rotation = transform.rotation;
-        // Quaternion tempRot = transform.rotation;
-        // bulletObject.transform.rotation = tempRot;
     }
-
-    // void Shoot(){
-    //     RaycastHit hit;
-    //     float x = Random.Range(-spread,spread);
-    //     float y = Random.Range(-spread,spread);
-    //     Vector3 temp = fps.transform.forward;
-    //     Vector3 direction = temp + new Vector3(x,y,0);
-        
-    //     if(Physics.Raycast(fps.transform.position,direction,out hit, range)){
-    //         Debug.Log(hit.transform.name);
-    //         if(hit.collider.CompareTag("Enemy")){
-    //             Destroy(hit.collider.gameObject);
-    //         }
-    //         if (hit.collider.CompareTag("Wall")){
-    //             Instantiate(bulletHoleGraphic,hit.point, Quaternion.Euler(0,180,0));
-    //         }
-    //         if (hit.collider.CompareTag("Floor") || hit.collider.CompareTag("Terrain")){
-    //             Instantiate(bulletHoleGraphic,hit.point, Quaternion.Euler(-90,180,0));
-    //         }
-    //     }
-    // }
-
 }

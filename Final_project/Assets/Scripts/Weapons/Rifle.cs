@@ -86,11 +86,5 @@ public class Rifle : MonoBehaviour
             }
         }
     }
-    // void Shoot(){
-    //     GameObject bulletObject = Instantiate(bulletPrefab);
-    //     bulletObject.transform.position = transform.position + transform.forward*0.5f;
-    //     bulletObject.transform.Translate(Vector3.up * 0.095f);
-    //     Quaternion tempRot = transform.rotation;
-    //     bulletObject.transform.rotation = tempRot;
-    // }
+
 }
