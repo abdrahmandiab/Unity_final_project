@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using TMPro;
 public class FireGrenadeLauncher : MonoBehaviour
 {
     public GameObject bulletPrefab;
@@ -17,12 +17,17 @@ public class FireGrenadeLauncher : MonoBehaviour
     private float reloadSpeed = 2f;
     private float reloadTimer; 
 
-    //for raycast
-    //public Camera fps;
-    //VFX
+    //GUI
+    public TMP_Text reloadText;
+    public TMP_Text bulletsLeftText;
+    // Possibly add another text for bullets in inventory.
+
+
     public Transform flashPoint;
     void Start(){
         bulletsLeft = maxAmmo;
+        reloadText.text = "";
+        bulletsLeftText.text = bulletsLeft.ToString();
     }
     void Update()
     {
@@ -31,8 +36,9 @@ public class FireGrenadeLauncher : MonoBehaviour
             if(Time.time >= reloadTimer){
                 reloading = false;
                 bulletsLeft = maxAmmo;
+                bulletsLeftText.text = bulletsLeft.ToString();
+                reloadText.text = "";
                 Debug.Log("Finished reloading!");
-                
             }
             
         }
@@ -42,8 +48,9 @@ public class FireGrenadeLauncher : MonoBehaviour
                     if(bulletsLeft>0){
                     lastFire = Time.time;
                     Shoot();
-                    //Instantiate(muzzleFlash,flashPoint.position, Quaternion.identity);
-                    bulletsLeft--;}
+                    bulletsLeft--;
+                    bulletsLeftText.text =  bulletsLeft.ToString();
+                    }
                     else{
                          Debug.Log("Out of bullets");
                          //gazara (click sound aw 7aga)
@@ -57,6 +64,7 @@ public class FireGrenadeLauncher : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.R)){
                 reloading = true;
                 reloadTimer = Time.time + reloadSpeed;
+                reloadText.text = "Reloading!";
                 Debug.Log("Reloading! (needs animation)");    
                 //gazara
                 //besela

@@ -44,6 +44,8 @@ public class FireGrenade : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach(Collider near in colliders){
                 Debug.Log(near.transform.name);
+                GameObject newFire = Instantiate(fireEffect,near.transform.position, transform.rotation );
+                newFire.transform.parent = near.transform;
                 //Add code for burn(damage,duration);
             }
         Instantiate(explosionEffect,transform.position, transform.rotation );
