@@ -14,6 +14,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
+        [SerializeField] private float m_CrouchSpeed;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
         [SerializeField] private float m_JumpSpeed;
         [SerializeField] private float m_StickToGroundForce;
@@ -41,6 +42,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_StepCycle;
         private float m_NextStep;
         private bool m_Jumping;
+        private bool double_jump;
         private AudioSource m_AudioSource;
 
         // Use this for initialization
@@ -54,6 +56,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_StepCycle = 0f;
             m_NextStep = m_StepCycle/2f;
             m_Jumping = false;
+            double_jump = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
         }
@@ -64,7 +67,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             RotateView();
             // the jump state needs to read here to make sure it is not missed
-            if (!m_Jump)
+            if ((!m_Jump && m_CharacterController.isGrounded) || (!m_Jump && !double_jump))
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
@@ -75,10 +78,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 PlayLandingSound();
                 m_MoveDir.y = 0f;
                 m_Jumping = false;
+                double_jump = false;
             }
             if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
             {
                 m_MoveDir.y = 0f;
+            }
+
+            if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                if (m_CharacterController.height == 1.8f)
+                    m_CharacterController.height = 0.1f;
+                else
+                    m_CharacterController.height = 1.8f;
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
@@ -121,6 +133,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     m_Jump = false;
                     m_Jumping = true;
                 }
+            }
+            else if(m_Jumping && m_Jump)
+            {
+                m_MoveDir.y = m_JumpSpeed;
+                PlayJumpSound();
+                m_Jump = false;
+                double_jump = true;
             }
             else
             {
@@ -215,8 +234,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // keep track of whether or not the character is walking or running
             m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
 #endif
+            if(Input.GetKey(KeyCode.LeftShift) && m_CharacterController.height != 1.8f)
+            {
+                m_CharacterController.height = 1.8f;
+            }
+
             // set the desired speed to be walking or running
-            speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
+            speed = (m_IsWalking && m_CharacterController.height == 1.8f) ? m_WalkSpeed : (m_CharacterController.height == 0.1f? m_CrouchSpeed : m_RunSpeed);
             m_Input = new Vector2(horizontal, vertical);
 
             // normalize input if it exceeds 1 in combined length:
