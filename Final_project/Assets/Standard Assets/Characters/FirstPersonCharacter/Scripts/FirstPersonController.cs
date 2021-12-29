@@ -139,7 +139,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_MoveDir.y = m_JumpSpeed;
                 PlayJumpSound();
                 m_Jump = false;
-                double_jump = true;
+                if(gameObject.CompareTag("Bloodhound"))
+                    double_jump = true;
             }
             else
             {
@@ -240,7 +241,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             // set the desired speed to be walking or running
-            speed = (m_IsWalking && m_CharacterController.height == 1.8f) ? m_WalkSpeed : (m_CharacterController.height == 0.1f? m_CrouchSpeed : m_RunSpeed);
+            speed = (m_IsWalking && m_CharacterController.height == 1.8f) ? m_WalkSpeed : (m_CharacterController.height == 0.1f? m_CrouchSpeed : (gameObject.CompareTag("Bangalor") ? m_RunSpeed * 2: m_RunSpeed));
+
+            Debug.Log(speed);
+
             m_Input = new Vector2(horizontal, vertical);
 
             // normalize input if it exceeds 1 in combined length:

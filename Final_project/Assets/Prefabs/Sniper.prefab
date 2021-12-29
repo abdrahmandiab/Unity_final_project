@@ -801,7 +801,7 @@ GameObject:
   - component: {fileID: 5085676175064571542}
   m_Layer: 0
   m_Name: Sniper
-  m_TagString: Weapon
+  m_TagString: Sniper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -846,7 +846,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5867135281861299391, guid: b632f82111ff10549b6f0c0dee3d5a43, type: 3}
-  weapon: {fileID: 0}
   damage: 85
   range: 100
   fireRate: 1

@@ -4,12 +4,24 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Weapon
   - Bullet
   - Enemy
   - Terrain
   - Floor
   - Wall
+  - Fire
+  - Health Pack
+  - Primary Ammo
+  - Secondary Ammo
+  - Grenade Launcher
+  - Sniper
+  - Rifle
+  - Shotgun
+  - Fire Launcher
+  - Weapon
+  - Loba
+  - Bangalor
+  - Bloodhound
   layers:
   - Default
   - TransparentFX

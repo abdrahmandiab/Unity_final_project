@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 1500178395}
   m_Layer: 0
   m_Name: FireLauncher
-  m_TagString: Untagged
+  m_TagString: Fire Launcher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,6 +161,8 @@ MonoBehaviour:
   fireRate: 1
   maxAmmo: 3
   bulletsLeft: 0
+  reloadText: {fileID: 0}
+  bulletsLeftText: {fileID: 0}
   flashPoint: {fileID: 2957339703182409220}
 --- !u!1 &6148562818019000020
 GameObject:
