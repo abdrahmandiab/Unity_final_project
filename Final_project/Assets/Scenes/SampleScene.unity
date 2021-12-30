@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -658,6 +658,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &702227298 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1440128065507697350, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
+  m_PrefabInstance: {fileID: 1440128064666686414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2760,6 +2765,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 656071519272797116, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656071519272797116, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
       propertyPath: m_TagString
       value: Fire Launcher
       objectReference: {fileID: 0}
@@ -2821,15 +2830,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1440128065508679910, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
       propertyPath: m_TagString
-      value: Bangalor
+      value: Bloodhound
       objectReference: {fileID: 0}
+    - target: {fileID: 1734374695467645019, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956855048690138670, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
+      propertyPath: fps
+      value: 
+      objectReference: {fileID: 702227298}
+    - target: {fileID: 1956855048690138670, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
+      propertyPath: muzzleFlash
+      value: 
+      objectReference: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
     - target: {fileID: 2698307041203746779, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
       propertyPath: m_TagString
       value: Grenade Launcher
       objectReference: {fileID: 0}
+    - target: {fileID: 2760471038100522110, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
+      propertyPath: fps
+      value: 
+      objectReference: {fileID: 702227298}
     - target: {fileID: 4707310129061094294, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
       propertyPath: m_TagString
       value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339133028712626476, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: 5449678317942096843, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
       propertyPath: reloadText
@@ -2839,9 +2868,25 @@ PrefabInstance:
       propertyPath: bulletsLeftText
       value: 
       objectReference: {fileID: 1938986354}
+    - target: {fileID: 5510699973983144034, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
+      propertyPath: fps
+      value: 
+      objectReference: {fileID: 702227298}
+    - target: {fileID: 5510699973983144034, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
+      propertyPath: muzzleFlash
+      value: 
+      objectReference: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
     - target: {fileID: 6156331980161240411, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
       propertyPath: m_TagString
       value: Sniper
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782880976911103201, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783687667194468321, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56e51e1a416489945b9d5321a52779a3, type: 3}
