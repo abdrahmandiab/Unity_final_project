@@ -16,7 +16,8 @@ public class PlayerLogic : MonoBehaviour
     private int secondaryAmmoCount;
     private int noEnemyShot;
     private bool isGameOver, isPaused, shieldOn;
-
+    public GameObject ball;
+    public Transform startPoint;
     // Prehabs: to implement drop weapons logic
     public GameObject[] weapons = new GameObject[5];
     //0 is Grenade Launcher
@@ -69,8 +70,6 @@ public class PlayerLogic : MonoBehaviour
             }
             if (!isPaused)
             {
-                Debug.Log(specialAbilitiesMeter);
-                Debug.Log(shieldOn);
                 // Disable Bangalore's special ability after 10 seconds
                 if(gameObject.CompareTag("Bangalor") && (Time.time - lastUpdate_BangalorSpecialAbilityActivated) >= 10.0f)
                 {
@@ -307,7 +306,8 @@ public class PlayerLogic : MonoBehaviour
     {
         if(gameObject.CompareTag("Loba"))
         {
-
+            GameObject thrownBall = Instantiate(ball, startPoint.position, startPoint.rotation);
+            thrownBall.GetComponent<Rigidbody>().velocity = startPoint.transform.up * 7.0f;
         }
         else if(gameObject.CompareTag("Bangalor"))
         {
