@@ -7,6 +7,7 @@ public class PlayerLogic : MonoBehaviour
     public int health;
     public int specialAbilitiesMeter;
     private float lastUpdate_SpecialAbilitiesMeter;
+    private float lastUpdate_BangalorSpecialAbilityActivated;
     private Collider canPickUp;
     private string selectedWeapon;
     private string carriedPrimaryWeapon;
@@ -14,7 +15,7 @@ public class PlayerLogic : MonoBehaviour
     private int primaryAmmoCount;
     private int secondaryAmmoCount;
     private int noEnemyShot;
-    private bool isGameOver, isPaused;
+    private bool isGameOver, isPaused, shieldOn;
 
     // Prehabs: to implement drop weapons logic
     public GameObject[] weapons = new GameObject[5];
@@ -47,6 +48,9 @@ public class PlayerLogic : MonoBehaviour
         selectedWeapon = null;
         primaryAmmoCount = 0;
         secondaryAmmoCount = 0;
+        //for Banaglore's special abilty
+        lastUpdate_BangalorSpecialAbilityActivated = Time.time;
+        shieldOn = false;
     }
 
     // Update is called once per frame
@@ -65,6 +69,15 @@ public class PlayerLogic : MonoBehaviour
             }
             if (!isPaused)
             {
+                Debug.Log(specialAbilitiesMeter);
+                Debug.Log(shieldOn);
+                // Disable Bangalore's special ability after 10 seconds
+                if(gameObject.CompareTag("Bangalor") && (Time.time - lastUpdate_BangalorSpecialAbilityActivated) >= 10.0f)
+                {
+                    this.gameObject.transform.GetChild(0).GetChild(5).gameObject.SetActive(false);
+                    shieldOn = false;
+                }
+
                 // Increase the special abilities meter every second
                 if (specialAbilitiesMeter != 100 && Time.time - lastUpdate_SpecialAbilitiesMeter >= 0.2f)
                 {
@@ -78,10 +91,6 @@ public class PlayerLogic : MonoBehaviour
                     executeSpecialAbility();
                     specialAbilitiesMeter = 0;
                 }
-
-                // Execute special ability
-                
-                    
 
                 //pick up logic
                 if (canPickUp != null && Input.GetKeyDown(KeyCode.E))
@@ -302,7 +311,9 @@ public class PlayerLogic : MonoBehaviour
         }
         else if(gameObject.CompareTag("Bangalor"))
         {
-
+            this.gameObject.transform.GetChild(0).GetChild(5).gameObject.SetActive(true);
+            lastUpdate_BangalorSpecialAbilityActivated = Time.time;
+            shieldOn = true;
         }
         else if(gameObject.CompareTag("Bloodhound"))
         {
@@ -388,8 +399,11 @@ public class PlayerLogic : MonoBehaviour
     // Method for Diab
     public void takeDamage(int amount)
     {
-        health = health - amount < 0 ? 0: health - amount;
-
+        // Special ability: Defensive Shield: protects Bangalor from any damage for 10 seconds.
+        if (!shieldOn)
+        {
+            health = health - amount < 0 ? 0 : health - amount;
+        }
         // Whenever the player's health points reaches zero, the player dies
         if (health == 0)
             gameOver();
