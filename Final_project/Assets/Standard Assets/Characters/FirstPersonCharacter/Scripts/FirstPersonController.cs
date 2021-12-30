@@ -67,7 +67,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             RotateView();
             // the jump state needs to read here to make sure it is not missed
-            if ((!m_Jump && m_CharacterController.isGrounded) || (!m_Jump && !double_jump))
+            if ((!m_Jump && m_CharacterController.isGrounded) || (!m_Jump && !double_jump && gameObject.CompareTag("Bloodhound")))
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
@@ -139,8 +139,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_MoveDir.y = m_JumpSpeed;
                 PlayJumpSound();
                 m_Jump = false;
-                if(gameObject.CompareTag("Bloodhound"))
-                    double_jump = true;
+                double_jump = true;
             }
             else
             {
