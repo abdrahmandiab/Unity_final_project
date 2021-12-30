@@ -226,7 +226,14 @@ public class PlayerLogic : MonoBehaviour
                     {
                         //besela: pick up animaton needed
                         Destroy(canPickUp.gameObject);
-                        secondaryAmmoCount = (secondaryAmmoCount + 2) > 5 ? 5 : (secondaryAmmoCount + 2);
+                        if (gameObject.CompareTag("Loba"))
+                        {
+                            secondaryAmmoCount = (secondaryAmmoCount + 2) > 10 ? 10 : (secondaryAmmoCount + 2);
+                        }
+                        else
+                        {
+                            secondaryAmmoCount = (secondaryAmmoCount + 2) > 5 ? 5 : (secondaryAmmoCount + 2);
+                        }
                         canPickUp = null;
                     }
                 }
