@@ -22,6 +22,10 @@ public class Shotgun : MonoBehaviour
     //VFX
     public GameObject muzzleFlash, bulletHoleGraphic;
     public Transform flashPoint;
+    //BloodHound
+    private float beastModeRad = 10f;
+    public static float beastModeTime = 10f;
+    public static float beastModeTimer;
     void Start(){
         bulletsLeft = maxAmmo;
     }
@@ -37,34 +41,48 @@ public class Shotgun : MonoBehaviour
             
         }
         else{
-            if (Input.GetMouseButtonDown(0)  ){
+            if(Time.time < beastModeTimer){
                 if(Time.time-lastFire> RateSeconds  ){
-                    if(bulletsLeft>0){
-                    lastFire = Time.time;
-                    for(int i=0; i<n_pellets;i++){
-                        Shoot();
-                    }
                     Instantiate(muzzleFlash,flashPoint.position, Quaternion.identity);
-                    bulletsLeft--;}
-                    else{
-                        Debug.Log("Out of bullets");
-                        //gazara  (click sound aw 7aga)         
+                    lastFire = Time.time;
+                    Collider[] colliders = Physics.OverlapSphere(transform.position, beastModeRad);
+                    if(colliders.Length != 0){
+                        int randy = Random.Range(0,colliders.Length-1);
+                        for(int i=0; i<n_pellets;i++){
+                            ShootAimBot(colliders[randy]);   
+                        }
                     }
-                }
-                else{
-                    Debug.Log("Can't fire that fast");
-                    //gazara  (click sound aw 7aga)
                 }
             }
-            if (Input.GetKeyDown(KeyCode.R)){
-                reloading = true;
-                reloadTimer = Time.time + reloadSpeed;
-                Debug.Log("Reloading! (needs animation)");   
-                 //gazara
-                 //besela
+            else{
+                if (Input.GetMouseButtonDown(0)  ){
+                    if(Time.time-lastFire> RateSeconds  ){
+                        if(bulletsLeft>0){
+                        lastFire = Time.time;
+                        for(int i=0; i<n_pellets;i++){
+                            Shoot();
+                        }
+                        Instantiate(muzzleFlash,flashPoint.position, Quaternion.identity);
+                        bulletsLeft--;}
+                        else{
+                            Debug.Log("Out of bullets");
+                            //gazara  (click sound aw 7aga)         
+                        }
+                    }
+                    else{
+                        Debug.Log("Can't fire that fast");
+                        //gazara  (click sound aw 7aga)
+                    }
+                }
+                if (Input.GetKeyDown(KeyCode.R)){
+                    reloading = true;
+                    reloadTimer = Time.time + reloadSpeed;
+                    Debug.Log("Reloading! (needs animation)");   
+                    //gazara
+                    //besela
+                }
             }
         }
-        
     }
     void Shoot(){
         RaycastHit hit;
@@ -77,6 +95,7 @@ public class Shotgun : MonoBehaviour
             Debug.Log(hit.transform.name);
             if(hit.collider.CompareTag("Enemy")){
                 Destroy(hit.collider.gameObject);
+                // do damage = to damage/n_pellets.
             }
             if (hit.collider.CompareTag("Wall")){
                 Instantiate(bulletHoleGraphic,hit.point, Quaternion.Euler(0,180,0));
@@ -87,4 +106,15 @@ public class Shotgun : MonoBehaviour
         }
         
     }
+    void ShootAimBot(Collider andy){
+        Debug.Log(andy.transform.name);
+        //.GetComponent<Rigidbody>();
+        // do takeDamage(damage/n_pellets).
+        
+    }
+    public static void goBeastMode(){
+        beastModeTimer = Time.time + beastModeTime;  
+        Debug.Log("Beast Mode activated!");
+    }
+
 }

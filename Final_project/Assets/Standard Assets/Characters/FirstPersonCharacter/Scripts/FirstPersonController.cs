@@ -243,7 +243,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // set the desired speed to be walking or running
             speed = (m_IsWalking && m_CharacterController.height == 1.8f) ? m_WalkSpeed : (m_CharacterController.height == 0.1f? m_CrouchSpeed : (gameObject.CompareTag("Bangalor") ? m_RunSpeed * 2: m_RunSpeed));
 
-            Debug.Log(speed);
+            //Debug.Log(speed);
 
             m_Input = new Vector2(horizontal, vertical);
 

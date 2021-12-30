@@ -7,7 +7,6 @@ public class PlayerLogic : MonoBehaviour
     public int health;
     public int specialAbilitiesMeter;
     private float lastUpdate_SpecialAbilitiesMeter;
-    private bool abilityDeployed;
     private Collider canPickUp;
     private string selectedWeapon;
     private string carriedPrimaryWeapon;
@@ -15,10 +14,13 @@ public class PlayerLogic : MonoBehaviour
     private int noEnemyShot;
     private bool isGameOver, isPaused;
 
-
     // Prehabs: to implement drop weapons logic
     public GameObject[] weapons = new GameObject[5];
-
+    //0 is Grenade Launcher
+    //1 is Sniper
+    //2 is Shotgun
+    //3 is Rifle
+    //4 is Fire Grenade Launcher
 
 
 
@@ -67,14 +69,15 @@ public class PlayerLogic : MonoBehaviour
                 }
 
                 // Activate special abilites
-                if (!abilityDeployed && specialAbilitiesMeter == 100 && Input.GetKeyDown(KeyCode.Q))
+                if (specialAbilitiesMeter == 100 && Input.GetKeyDown(KeyCode.Q))
                 {
+                    executeSpecialAbility();
                     specialAbilitiesMeter = 0;
                 }
 
                 // Execute special ability
-                if (abilityDeployed)
-                    executeSpecialAbility();
+                
+                    
 
                 //pick up logic
                 if (canPickUp != null && Input.GetKeyDown(KeyCode.E))
@@ -286,10 +289,42 @@ public class PlayerLogic : MonoBehaviour
         }
         else if(gameObject.CompareTag("Bloodhound"))
         {
+        selectedWeapon = carriedPrimaryWeapon;
+        if (selectedWeapon.Equals("Sniper")){
+            //select sniper
+            this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
+            this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(false);
+
+            Sniper.goBeastMode();
+        }
+        else if (selectedWeapon.Equals("Shotgun"))
+        {
+            //select shotgun
+            this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
+            this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(false);
+
+            Shotgun.goBeastMode();
+        }
+        else if (selectedWeapon.Equals("Rifle"))
+        {
+            //select rifle
+            this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(true);
+            this.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(false);
+
+            Rifle.goBeastMode();
+        }
 
         }
         //IF ABILITY DURATION DONE (CODE STILL NOT IMPLEMENTED)
-        abilityDeployed = false;
     }
 
 
