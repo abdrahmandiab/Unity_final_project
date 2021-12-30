@@ -12,15 +12,14 @@ public class PlayerLogic : MonoBehaviour
     private string selectedWeapon;
     private string carriedPrimaryWeapon;
     private string carriedSecondaryWeapon;
+    private int primaryAmmoCount;
+    private int secondaryAmmoCount;
     private int noEnemyShot;
     private bool isGameOver, isPaused;
 
 
     // Prehabs: to implement drop weapons logic
     public GameObject[] weapons = new GameObject[5];
-
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +40,8 @@ public class PlayerLogic : MonoBehaviour
         carriedPrimaryWeapon = null;
         carriedSecondaryWeapon = null;
         selectedWeapon = null;
+        primaryAmmoCount=0;
+        secondaryAmmoCount = 0;
     }
 
     // Update is called once per frame
@@ -79,11 +80,11 @@ public class PlayerLogic : MonoBehaviour
                 //pick up logic
                 if (canPickUp != null && Input.GetKeyDown(KeyCode.E))
                 {
-                    if (canPickUp.gameObject.CompareTag("Health Pack") && health < 75)
+                    if (canPickUp.gameObject.CompareTag("Health Pack"))
                     {
                         //besela: pick up animaton needed
                         Destroy(canPickUp.gameObject);
-                        health += 25;
+                        health = health + 25 > 100 ? 100 : health + 25;
                         canPickUp = null;
                     }
                     else if (canPickUp.gameObject.CompareTag("Grenade Launcher") || canPickUp.gameObject.CompareTag("Fire Launcher"))
@@ -134,7 +135,7 @@ public class PlayerLogic : MonoBehaviour
                                 //select weapon
                                 //besela: switching animaton needed
                                 selectedWeapon = carriedSecondaryWeapon;
-                            t   his.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(true);
+                                this.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(true);
                         }
                         canPickUp = null;
                     }
@@ -208,18 +209,18 @@ public class PlayerLogic : MonoBehaviour
                         }
                         canPickUp = null;
                     }
-                    else if (canPickUp.gameObject.CompareTag("Primary Ammo") && health < 75)
+                    else if (canPickUp.gameObject.CompareTag("Primary Ammo"))
                     {
                         //besela: pick up animaton needed
                         Destroy(canPickUp.gameObject);
-                        health += 25;
+                        primaryAmmoCount = (primaryAmmoCount + 50)>150? 150: (primaryAmmoCount + 50);
                         canPickUp = null;
                     }
-                    else if (canPickUp.gameObject.CompareTag("Secondary Ammo") && health < 75)
+                    else if (canPickUp.gameObject.CompareTag("Secondary Ammo"))
                     {
                         //besela: pick up animaton needed
                         Destroy(canPickUp.gameObject);
-                        health += 25;
+                        secondaryAmmoCount = (secondaryAmmoCount + 2) > 5 ? 5 : (secondaryAmmoCount + 2);
                         canPickUp = null;
                     }
                 }
@@ -359,6 +360,27 @@ public class PlayerLogic : MonoBehaviour
     public void noEnemiesShot()
     {
         noEnemyShot++;
+    }
+
+    //getters & setters
+    public int getPrimaryAmmoCount()
+    {
+        return primaryAmmoCount;
+    }
+
+    public int getSecondaryAmmoCount()
+    {
+        return secondaryAmmoCount;
+    }
+
+    public void setPrimaryAmmoCount(int val)
+    {
+        primaryAmmoCount = val<0 ? 0 : val;
+    }
+
+    public void setSecondaryAmmoCount(int val)
+    {
+        secondaryAmmoCount = val < 0 ? 0 : val;
     }
 
 }
