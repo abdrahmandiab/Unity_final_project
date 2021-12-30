@@ -89,7 +89,7 @@ public class PlayerLogic : MonoBehaviour
                     }
                     else if (canPickUp.gameObject.CompareTag("Grenade Launcher") || canPickUp.gameObject.CompareTag("Fire Launcher"))
                     {
-                        if (!carriedSecondaryWeapon.Equals(null))
+                        if (carriedSecondaryWeapon != null)
                         {
                             //we must drop current secondary weapon first!
                             //besela: drop animation needed
@@ -131,7 +131,7 @@ public class PlayerLogic : MonoBehaviour
                         {
                             //pick up fire launcher
                             carriedSecondaryWeapon = "Fire Launcher";
-                            if (carriedPrimaryWeapon.Equals(null) || !selectedWeapon.Equals(carriedPrimaryWeapon))
+                            if (carriedPrimaryWeapon == null || !selectedWeapon.Equals(carriedPrimaryWeapon))
                                 //select weapon
                                 //besela: switching animaton needed
                                 selectedWeapon = carriedSecondaryWeapon;
@@ -141,7 +141,7 @@ public class PlayerLogic : MonoBehaviour
                     }
                     else if (canPickUp.gameObject.CompareTag("Sniper") || canPickUp.gameObject.CompareTag("Shotgun") || canPickUp.gameObject.CompareTag("Rifle"))
                     {
-                        if (!carriedPrimaryWeapon.Equals(null))
+                        if (carriedPrimaryWeapon != null)
                         {
                             //we must drop current primary weapon first!
                             //besela: drop animation needed
@@ -181,7 +181,7 @@ public class PlayerLogic : MonoBehaviour
                         {
                             //pick up Sniper
                             carriedPrimaryWeapon = "Sniper";
-                            if (carriedSecondaryWeapon.Equals(null) || !selectedWeapon.Equals(carriedSecondaryWeapon))
+                            if (carriedSecondaryWeapon == null || !selectedWeapon.Equals(carriedSecondaryWeapon))
                                 //select weapon
                                 //besela: switching animaton needed
                                 selectedWeapon = carriedPrimaryWeapon;
@@ -191,7 +191,7 @@ public class PlayerLogic : MonoBehaviour
                         {
                             //pick up grenade launcher
                             carriedPrimaryWeapon = "Shotgun";
-                            if (carriedSecondaryWeapon.Equals(null) || !selectedWeapon.Equals(carriedSecondaryWeapon))
+                            if (carriedSecondaryWeapon == null || !selectedWeapon.Equals(carriedSecondaryWeapon))
                                 //select weapon
                                 //besela: switching animaton needed
                                 selectedWeapon = carriedPrimaryWeapon;
@@ -201,7 +201,7 @@ public class PlayerLogic : MonoBehaviour
                         {
                             //pick up grenade launcher
                             carriedPrimaryWeapon = "Rifle";
-                            if (carriedSecondaryWeapon.Equals(null) || !selectedWeapon.Equals(carriedSecondaryWeapon))
+                            if (carriedSecondaryWeapon == null || !selectedWeapon.Equals(carriedSecondaryWeapon))
                                 //select weapon
                                 //besela: switching animaton needed
                                 selectedWeapon = carriedPrimaryWeapon;
@@ -225,7 +225,7 @@ public class PlayerLogic : MonoBehaviour
                     }
                 }
                 //switch weapons logic
-                if (Input.GetKeyDown(KeyCode.Z) && !carriedPrimaryWeapon.Equals(null) && !carriedSecondaryWeapon.Equals(null))
+                if (Input.GetKeyDown(KeyCode.Z) && carriedPrimaryWeapon != null && carriedSecondaryWeapon != null)
                 {
                     //besela: switching animaton needed
                     selectedWeapon = selectedWeapon.Equals(carriedPrimaryWeapon) ? carriedSecondaryWeapon : carriedPrimaryWeapon;
