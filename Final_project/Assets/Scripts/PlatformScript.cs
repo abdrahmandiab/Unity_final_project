@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlatformScript : MonoBehaviour
 {
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,18 +15,20 @@ public class PlatformScript : MonoBehaviour
     void Update()
     {
         
-    }
-    private void OnCollisionEnter(Collision collision)
+    }  
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Player") {
-            collision.collider.transform.SetParent(transform);
+        Debug.Log("7aseb yasta");
+        if (other.gameObject == Player) {
+            other.transform.parent = transform;
         }
     }
-
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.tag == "Player") {
-            collision.collider.transform.SetParent(null);
+        Debug.Log("teslam");
+        if (other.gameObject == Player)
+        {
+            other.transform.parent = null;
         }
     }
 }
