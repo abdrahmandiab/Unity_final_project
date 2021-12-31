@@ -5,7 +5,7 @@ public class Shotgun : MonoBehaviour
     private float RateSeconds;
     private float lastFire;
     
-    public float damage = 70f;
+    public int damage = 70;
     public float range = 30f;
     public float fireRate = 3f;
     public int maxAmmo = 12;
@@ -94,7 +94,7 @@ public class Shotgun : MonoBehaviour
         if(Physics.Raycast(fps.transform.position,direction,out hit, range)){
             Debug.Log(hit.transform.name);
             if(hit.collider.CompareTag("Enemy")){
-                Destroy(hit.collider.gameObject);
+                hit.collider.gameObject.GetComponent<EnemyAI>().takeDamage(damage/n_pellets);
                 // do damage = to damage/n_pellets.
             }
             if (hit.collider.CompareTag("Wall")){

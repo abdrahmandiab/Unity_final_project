@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.14124322, g: 0.1825431, b: 0.21614313, a: 1}
+  m_IndirectSpecularColor: {r: 0.14124444, g: 0.18254715, b: 0.2161459, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -610,6 +610,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Free_Mossy_4 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -729,6 +733,10 @@ PrefabInstance:
     - target: {fileID: 1809967075546372, guid: 284170934443e0e48b462a5e3a9198e4, type: 3}
       propertyPath: m_Name
       value: SM_Generic_Small_Rocks_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809967075546372, guid: 284170934443e0e48b462a5e3a9198e4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4603901524923250, guid: 284170934443e0e48b462a5e3a9198e4, type: 3}
       propertyPath: m_RootOrder
@@ -995,7 +1003,7 @@ GameObject:
   - component: {fileID: 79043346}
   m_Layer: 0
   m_Name: Free_Sharp_4 (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1435,6 +1443,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -3316,7 +3328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4887784071015940, guid: f78b30d805ad7004790e9ff2fe8c3eda, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4887784071015940, guid: f78b30d805ad7004790e9ff2fe8c3eda, type: 3}
       propertyPath: m_LocalScale.x
@@ -3543,7 +3555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4262925473364164, guid: 15ec8501697a0464b81b39bf22ac3bae, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4262925473364164, guid: 15ec8501697a0464b81b39bf22ac3bae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4095,6 +4107,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -5207,6 +5223,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -6506,7 +6526,7 @@ Transform:
   m_LocalScale: {x: 200.00015, y: 250, z: 200.00015}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -59.689, z: 0}
 --- !u!1001 &480025446
 PrefabInstance:
@@ -6946,6 +6966,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -7674,6 +7698,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -9068,7 +9096,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &593275229
 PrefabInstance:
@@ -9302,6 +9330,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -9669,6 +9701,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Generic_Small_Rocks_05 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1809967075546372, guid: 284170934443e0e48b462a5e3a9198e4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4603901524923250, guid: 284170934443e0e48b462a5e3a9198e4, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -9746,7 +9782,7 @@ GameObject:
   - component: {fileID: 629681180}
   m_Layer: 0
   m_Name: Free_Sharp_4 (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10976,7 +11012,7 @@ Transform:
   - {fileID: 84689612}
   - {fileID: 1127089646}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 5.784, y: 57.128, z: 0}
 --- !u!1001 &684840274
 PrefabInstance:
@@ -11058,6 +11094,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -11224,7 +11264,7 @@ Transform:
   m_LocalScale: {x: 200.00009, y: 250, z: 200.00009}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -11317,7 +11357,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &717725663
 PrefabInstance:
@@ -11469,6 +11509,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -12120,6 +12164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Artifact_AlienRuin_07 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5b759073ae59894478065738a172d88f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 5b759073ae59894478065738a172d88f, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -12201,6 +12249,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -13599,7 +13651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4060614935320170, guid: fe3c0dc69d1ac7e4ab94b36398391c92, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4060614935320170, guid: fe3c0dc69d1ac7e4ab94b36398391c92, type: 3}
       propertyPath: m_LocalScale.x
@@ -13796,7 +13848,7 @@ Transform:
   - {fileID: 1249751004}
   - {fileID: 978185182}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: -0.2, y: 180, z: 0}
 --- !u!1001 &929080499
 PrefabInstance:
@@ -14505,7 +14557,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &963306788
 PrefabInstance:
@@ -14736,6 +14788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Generic_Cloud_05
       objectReference: {fileID: 0}
+    - target: {fileID: 1941417610892894, guid: 2cfbae5f39dfdc34783924dccedf0a6c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4360361911611372, guid: 2cfbae5f39dfdc34783924dccedf0a6c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -14848,7 +14904,7 @@ Transform:
   - {fileID: 1433622944}
   - {fileID: 1918079422}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1005411300 stripped
 GameObject:
@@ -17175,7 +17231,7 @@ Transform:
   m_LocalScale: {x: 1.2000003, y: 1.2, z: 1.2000003}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1170206451
 PrefabInstance:
@@ -18948,6 +19004,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Free_Mossy_4 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -19605,6 +19665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Free_Mossy_4 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -20100,6 +20164,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4445512300602574, guid: a55ca486c2c27e540b4e24d8d8962a69, type: 3}
   m_PrefabInstance: {fileID: 1359700119}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1361373392
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 292181123322755239, guid: bd4765698e7e2934d93d7ae2a14f47d1, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 292181123322755239, guid: bd4765698e7e2934d93d7ae2a14f47d1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 313.05826
+      objectReference: {fileID: 0}
+    - target: {fileID: 292181123322755239, guid: bd4765698e7e2934d93d7ae2a14f47d1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -31.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 292181123322755239, guid: bd4765698e7e2934d93d7ae2a14f47d1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -30.571241
+      objectReference: {fileID: 0}
+    - target: {fileID: 292181123322755239, guid: bd4765698e7e2934d93d7ae2a14f47d1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 292181123322755239, guid: bd4765698e7e2934d93d7ae2a14f47d1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 292181123322755239, guid: bd4765698e7e2934d93d7ae2a14f47d1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 292181123322755239, guid: bd4765698e7e2934d93d7ae2a14f47d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 292181123322755239, guid: bd4765698e7e2934d93d7ae2a14f47d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 292181123322755239, guid: bd4765698e7e2934d93d7ae2a14f47d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 292181123322755239, guid: bd4765698e7e2934d93d7ae2a14f47d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 292181123322979463, guid: bd4765698e7e2934d93d7ae2a14f47d1, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd4765698e7e2934d93d7ae2a14f47d1, type: 3}
 --- !u!1001 &1361983923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20110,6 +20231,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -20539,7 +20664,7 @@ GameObject:
   - component: {fileID: 1416321966}
   m_Layer: 0
   m_Name: Alien Maze
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20590,7 +20715,7 @@ Transform:
   - {fileID: 1848000936}
   - {fileID: 1796842003}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: -130.71, z: 0}
 --- !u!1001 &1420221584
 PrefabInstance:
@@ -21344,9 +21469,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSController
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalScale.x
@@ -21694,6 +21823,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -22784,6 +22917,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Free_Mossy_4 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -23042,6 +23179,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1174785737048626, guid: 210ba2c8f4337404291ec2d2ad42d4ba, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 4501957577015168, guid: 210ba2c8f4337404291ec2d2ad42d4ba, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -23259,6 +23400,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -23954,7 +24099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4303440673085326, guid: 91dff06c3b609bd4c8d94a4713c25fd7, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4303440673085326, guid: 91dff06c3b609bd4c8d94a4713c25fd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24246,6 +24391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Free_Mossy_4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -24322,7 +24471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4357226309746890, guid: 94bb05c4538aa7d48ab86ab22c6589cd, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4357226309746890, guid: 94bb05c4538aa7d48ab86ab22c6589cd, type: 3}
       propertyPath: m_LocalScale.x
@@ -24816,6 +24965,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -25529,6 +25682,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Free_Mossy_4 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -25602,6 +25759,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -25967,6 +26128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Generic_Cloud_03
       objectReference: {fileID: 0}
+    - target: {fileID: 1692292853423404, guid: 8881d504bb749e249ac69299c762dbd9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4199698955280160, guid: 8881d504bb749e249ac69299c762dbd9, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -26121,6 +26286,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -26702,6 +26871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Free_Mossy_4 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
       value: 32
@@ -26793,7 +26966,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1861722727
 PrefabInstance:
@@ -27636,6 +27809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Free_Mossy_4 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -28088,6 +28265,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Free_Mossy_4 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -28301,6 +28482,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
@@ -29821,6 +30006,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Free_Mossy_4 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -30564,6 +30753,10 @@ PrefabInstance:
     - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_Name
       value: Free_Mossy_4 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943661466745886, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4294109675491792, guid: 3a95d7ebc00ebd9439d53c491d376337, type: 3}
       propertyPath: m_RootOrder

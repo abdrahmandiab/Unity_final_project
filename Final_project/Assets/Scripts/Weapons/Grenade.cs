@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Grenade : MonoBehaviour
 {
-    public float damage = 50f;
+    public int damage = 50;
     private float despawnTime = 4f;
     private float spawnTime = 0;
     public float radius = 4f;
@@ -37,11 +37,14 @@ public class Grenade : MonoBehaviour
     void explode(){
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach(Collider near in colliders){
+            if(near.gameObject.tag == "Enemy" ){
             Rigidbody rigb = near.GetComponent<Rigidbody>();
             if (rigb!=null){
                 rigb.AddExplosionForce(explosionForce,transform.position,radius,1f,ForceMode.Impulse);
-                // near.takeDamage(damage);
             }
+            near.gameObject.GetComponent<EnemyAI>().takeDamage(damage);
+            }
+            
         }
         Instantiate(explosionEffect,transform.position, transform.rotation );
         Destroy(gameObject);

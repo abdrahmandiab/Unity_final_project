@@ -4,7 +4,7 @@ using UnityEngine;
 public class FireGrenade : MonoBehaviour
 {
 
-    public float damage = 25f;
+    public int damage = 25;
     public float duration = 5f;
     public int bouncies = 0;
     public int maxBouncies = 3;
@@ -43,9 +43,11 @@ public class FireGrenade : MonoBehaviour
     void explode(){
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach(Collider near in colliders){
-                Debug.Log(near.transform.name);
+            if(near.gameObject.tag == "Enemy" ){
+                near.gameObject.GetComponent<EnemyAI>().burn(damage);
                 GameObject newFire = Instantiate(fireEffect,near.transform.position, transform.rotation );
                 newFire.transform.parent = near.transform;
+                }
                 //Add code for burn(damage,duration);
             }
         Instantiate(explosionEffect,transform.position, transform.rotation );

@@ -9,7 +9,7 @@ public class Rifle : MonoBehaviour
     private float lastFire;
 
     //Gun profile
-    public float damage = 10f;
+    public int damage = 10;
     public float range = 65f;
     public float fireRate = 10f;
     public int maxAmmo = 35;
@@ -85,7 +85,7 @@ public class Rifle : MonoBehaviour
         if(Physics.Raycast(fps.transform.position,direction,out hit, range)){
             //Debug.Log(hit.transform.name);
             if(hit.collider.CompareTag("Enemy")){
-                Destroy(hit.collider.gameObject);
+                hit.collider.gameObject.GetComponent<EnemyAI>().takeDamage(damage);
             }
             if (hit.collider.CompareTag("Wall")){
                 Instantiate(bulletHoleGraphic,hit.point, Quaternion.Euler(0,180,0));
@@ -100,6 +100,7 @@ public class Rifle : MonoBehaviour
         if(colliders.Length != 0){
             int randy = Random.Range(0,colliders.Length-1);
             Debug.Log(colliders[randy].transform.name);
+            
             //.GetComponent<Rigidbody>();
         }
     }

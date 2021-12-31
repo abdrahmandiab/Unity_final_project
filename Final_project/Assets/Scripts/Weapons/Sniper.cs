@@ -9,7 +9,7 @@ public class Sniper : MonoBehaviour
     private float lastFire;
 
     //Gun profile
-    public float damage = 85f;
+    public int damage = 85;
     public float range = 100f;
     public float fireRate = 1f;
     public int maxAmmo = 6;
@@ -90,7 +90,7 @@ public class Sniper : MonoBehaviour
         if(Physics.Raycast(fps.transform.position,direction,out hit, range)){
             //Debug.Log(hit.transform.name);
             if(hit.collider.CompareTag("Enemy")){
-                Destroy(hit.collider.gameObject);
+                hit.collider.gameObject.GetComponent<EnemyAI>().takeDamage(damage);
             }
             if (hit.collider.CompareTag("Wall")){
                 Instantiate(bulletHoleGraphic,hit.point, Quaternion.Euler(0,180,0));
