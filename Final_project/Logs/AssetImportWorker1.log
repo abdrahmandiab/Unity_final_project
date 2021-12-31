@@ -1,0 +1,315 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.1f1 (77a89f25062f) revision 7841951'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1415; Version 2009; 64bit' Language: 'en' Physical Memory: 8083 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/Users/xenom/Documents/UNITYYYYYYYYYY/Unity_final_project/Final_project
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+64476
+Successfully changed project path to: C:/Users/xenom/Documents/UNITYYYYYYYYYY/Unity_final_project/Final_project
+C:/Users/xenom/Documents/UNITYYYYYYYYYY/Unity_final_project/Final_project
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 92.11 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.1f1 (77a89f25062f)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/xenom/Documents/UNITYYYYYYYYYY/Unity_final_project/Final_project/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 520 (ID=0x1916)
+    Vendor:   
+    VRAM:     4041 MB
+    Driver:   26.20.100.8142
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56520
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.034532 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 91.65 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  5.261 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.027953 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000002150A3B0050 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150A7D3F40 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150DF651E0 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150E052C70 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150C9E2010 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150A7A3280 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150C980250 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150CCCB020 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150C980250 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150C826010 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150C980250 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150C905E20 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150ACE8C50 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.342 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 0.73 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1277 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 83.4 MB.
+System memory in use after: 83.1 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1735.
+Total: 2.629100 ms (FindLiveObjects: 0.154900 ms CreateObjectMapping: 0.040100 ms MarkObjects: 2.016900 ms  DeleteObjects: 0.415900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Assets/SampleScenes/Menu/Scripts/MenuSceneLoader.cs
+  artifactKey: Guid(892ae45d769642343a5a5d289bb26465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/SampleScenes/Menu/Scripts/MenuSceneLoader.cs using Guid(892ae45d769642343a5a5d289bb26465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c83ee4b8a0ef06c3435b928d248c15ab') in 0.100890 seconds
+  Import took 0.104052 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000389 seconds.
+  path: Assets/Assets/SampleScenes
+  artifactKey: Guid(bb7dfb08edffb0947b565f065388ac90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/SampleScenes using Guid(bb7dfb08edffb0947b565f065388ac90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '307be72cfa651678c92683851747bbfa') in 0.047324 seconds
+  Import took 0.054164 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000884 seconds.
+  path: Assets/Assets/SampleScenes/Menu/Scripts/PauseMenu.cs
+  artifactKey: Guid(8b04b885fe044e84bb4fd242d87b425a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/SampleScenes/Menu/Scripts/PauseMenu.cs using Guid(8b04b885fe044e84bb4fd242d87b425a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2cab7c0a7fd96fcaf8ab17cf1ebf4d4') in 0.030439 seconds
+  Import took 0.036438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/Assets/SampleScenes/Menu/Scripts/SceneAndURLLoader.cs
+  artifactKey: Guid(1f4787681a3620c4fb70bec639ea645f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/SampleScenes/Menu/Scripts/SceneAndURLLoader.cs using Guid(1f4787681a3620c4fb70bec639ea645f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ed9b1750a500a381b7f7f44adcfb224') in 0.035775 seconds
+  Import took 0.045986 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/Assets/SampleScenes/Menu
+  artifactKey: Guid(9bb8911adf0e62c48bc4ea076e54c12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/SampleScenes/Menu using Guid(9bb8911adf0e62c48bc4ea076e54c12f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86c85b0f968bc16f141e61783eb78a85') in 0.020668 seconds
+  Import took 0.025455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000682 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(54018c70af2527140a485e06ce8121b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(54018c70af2527140a485e06ce8121b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5d66ea970545b4a79c119933de7c2f4') in 0.013548 seconds
+  Import took 0.018346 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/Assets/SampleScenes/Menu/Scripts
+  artifactKey: Guid(59ddbc2ec2904a348bc13121d72e7ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/SampleScenes/Menu/Scripts using Guid(59ddbc2ec2904a348bc13121d72e7ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e9b89dff4ad3e1de50936ff8b84727a') in 0.015289 seconds
+  Import took 0.031069 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.544865 seconds.
+  path: Assets/Assets/SampleScenes/Scripts
+  artifactKey: Guid(104a8e3421e45b94abdb032f13b12129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/SampleScenes/Scripts using Guid(104a8e3421e45b94abdb032f13b12129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '871608db42114e27c8a89562bac3d7e4') in 0.007681 seconds
+  Import took 0.011812 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.230042 seconds.
+  path: Assets/Assets/SampleScenes/Scripts/PlaceTargetWithMouse.cs
+  artifactKey: Guid(0bbd1452ff2343c4da0ed3c3138d4b89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/SampleScenes/Scripts/PlaceTargetWithMouse.cs using Guid(0bbd1452ff2343c4da0ed3c3138d4b89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7713be1d4fda08054f7004896a0343c9') in 0.013780 seconds
+  Import took 0.018109 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.844605 seconds.
+  path: Assets/Assets/SampleScenes/Scripts/ParticleSceneControls.cs
+  artifactKey: Guid(724ae1e0a975fa8449e6e3ffc7554ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/SampleScenes/Scripts/ParticleSceneControls.cs using Guid(724ae1e0a975fa8449e6e3ffc7554ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99e0bf91264794749fc0b270c23eb1cc') in 0.008818 seconds
+  Import took 0.012133 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.070116 seconds.
+  path: Assets/Assets/SampleScenes/Scripts/ParticleSceneControls.cs
+  artifactKey: Guid(724ae1e0a975fa8449e6e3ffc7554ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/SampleScenes/Scripts/ParticleSceneControls.cs using Guid(724ae1e0a975fa8449e6e3ffc7554ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99e0bf91264794749fc0b270c23eb1cc') in 0.004278 seconds
+  Import took 0.009584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.913913 seconds.
+  path: Assets/Assets/SampleScenes/Scripts/CameraSwitch.cs
+  artifactKey: Guid(0cb34ca8e7f89df4bb20c3d80a2b29a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/SampleScenes/Scripts/CameraSwitch.cs using Guid(0cb34ca8e7f89df4bb20c3d80a2b29a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38f006dda861c8050a77391827aaaa51') in 0.012549 seconds
+  Import took 0.016196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.348576 seconds.
+  path: Assets/Assets/SampleScenes/Scripts/LevelReset.cs
+  artifactKey: Guid(7080d3a5292be2247aa00ee7771820a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/SampleScenes/Scripts/LevelReset.cs using Guid(7080d3a5292be2247aa00ee7771820a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa5c2ad675a6392c84a2e4809b58957f') in 0.012240 seconds
+  Import took 0.015948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.429474 seconds.
+  path: Assets/Assets/SampleScenes/Scripts/SlowMoButton.cs
+  artifactKey: Guid(5e71ae8c68576274fb8b9cb68af72f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/SampleScenes/Scripts/SlowMoButton.cs using Guid(5e71ae8c68576274fb8b9cb68af72f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfa075e1ae0a94c9132f677fa376257d') in 0.008488 seconds
+  Import took 0.011734 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.034684 seconds.
+  path: Assets/Assets/SampleScenes/Scripts/SlowMoButton.cs
+  artifactKey: Guid(5e71ae8c68576274fb8b9cb68af72f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/SampleScenes/Scripts/SlowMoButton.cs using Guid(5e71ae8c68576274fb8b9cb68af72f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfa075e1ae0a94c9132f677fa376257d') in 0.005346 seconds
+  Import took 0.009498 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.051829 seconds.
+  path: Assets/Assets/Scripts
+  artifactKey: Guid(8936f17f5aea7d540bb35148dc776772) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Scripts using Guid(8936f17f5aea7d540bb35148dc776772) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41c9240631950f5f1e807d7a2ede979c') in 0.009489 seconds
+  Import took 0.014556 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003102 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000002150D16E010 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150EE73E40 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150A7A66B0 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150C92C020 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150A70B020 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150C92C020 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150CC77020 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150C92C020 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150CCCB020 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150C92C020 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150ED36030 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002150A70B020 doesn't match image C:\Users\xenom\Documents\UNITYYYYYYYYYY\Unity_final_project\Final_project\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.122 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.84 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1227 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 80.2 MB.
+System memory in use after: 79.9 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1730.
+Total: 8.248600 ms (FindLiveObjects: 0.271900 ms CreateObjectMapping: 0.138000 ms MarkObjects: 6.079900 ms  DeleteObjects: 1.756500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 356.604719 seconds.
+  path: Assets/Scenes/Battle Royale.unity
+  artifactKey: Guid(d71f91a467f869f4daa51d443c1b4915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Battle Royale.unity using Guid(d71f91a467f869f4daa51d443c1b4915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '027cd9eb4b13cc95b6a3536cc847446c') in 0.019575 seconds
+  Import took 0.023241 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002299 seconds.
+  path: Assets/Scenes/Battle Royale.unity
+  artifactKey: Guid(d71f91a467f869f4daa51d443c1b4915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Battle Royale.unity using Guid(d71f91a467f869f4daa51d443c1b4915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '027cd9eb4b13cc95b6a3536cc847446c') in 0.005997 seconds
+  Import took 0.010684 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.581706 seconds.
+  path: Assets/Scenes/Parkour.unity
+  artifactKey: Guid(55d401e7ba23ea141a3cc42df036e0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Parkour.unity using Guid(55d401e7ba23ea141a3cc42df036e0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72cba0301e85d4d698b5b1a3c992b991') in 0.018375 seconds
+  Import took 0.039583 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.624051 seconds.
+  path: Assets/EffectExamples/Readme.asset
+  artifactKey: Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectExamples/Readme.asset using Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c43a11a8e728ade9648b0111f33810d7') in 0.051687 seconds
+  Import took 0.054563 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000480 seconds.
+  path: Assets/EffectExamples/SmokeTrail.mat
+  artifactKey: Guid(85320f50710fcfb4d886bc56151bea1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EffectExamples/SmokeTrail.mat using Guid(85320f50710fcfb4d886bc56151bea1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86c0d1cc6e8fe788e4f71d4646c71a7a') in 0.289575 seconds
+  Import took 0.311510 seconds .
+
