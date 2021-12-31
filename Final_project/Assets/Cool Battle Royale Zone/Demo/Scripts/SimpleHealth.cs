@@ -46,13 +46,23 @@ namespace CoolBattleRoyaleZone
 		// Method for applying damage to health
 		private void DoDamage ( )
 		{
-			Health -= Zone.Instance.CurStep + 1; // Applying damage based on current step index
+			if (gameObject.tag == "Player") {
+				Health -= 1; // Applying damage
+
+				if (Health <= 0) {
+					//Apply main character death animation
+				}
+			}
+
+			if (gameObject.tag == "Enemy") {
+				//Kill the enemy + Apply death animation + sounds etc...
+			}
+
+
 			// Then choose text color : red if health less than 25 and green if greater than 25
-			var hpColor = Health > 25 ? "<color=green>" : "<color=red>";
+			/*var hpColor = Health > 25 ? "<color=green>" : "<color=red>";
 			if ( HealthText )
-				HealthText.text = "Health: " + hpColor + Health + "</color>"; // Then setup this color to text
-			if ( Health <= 0 )
-				Destroy ( gameObject ); // And if health amount is zero,destroying the simple player
+				HealthText.text = "Health: " + hpColor + Health + "</color>"; // Then setup this color to text*/
 		}
 	}
 }

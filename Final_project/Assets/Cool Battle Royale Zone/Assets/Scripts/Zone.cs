@@ -58,7 +58,7 @@ namespace CoolBattleRoyaleZone
 			[Range ( 0.5f , 2f )] public float          MoveSpeedRange = 1; // Scale of shrinking speed (optional)
 		}
 
-		public int  StepsToEnd                = 6;    // Zone steps/circles count
+		public int  StepsToEnd                = 4;    // Zone steps/circles count
 		public bool ResetupZoneCirclesOnStart = true; // Do we need to re-setup steps on start play ?
 
 		public bool StartupTheZoneOnStart = true; // Do we want to startup the zone on start play ? Default is YES,
