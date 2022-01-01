@@ -29,8 +29,13 @@ public class EnemyAI : MonoBehaviour
     private void Awake()
     {
 
-        player =  GameObject.FindGameObjectWithTag("Player");
-        
+        player =  GameObject.FindGameObjectWithTag("Loba");
+        if(player == null){
+            player = GameObject.FindGameObjectWithTag("Bangalor");
+        }
+        if(player == null){
+            player = GameObject.FindGameObjectWithTag("Bloodhound");
+        }
 
 
         agent = GetComponent<NavMeshAgent>();
