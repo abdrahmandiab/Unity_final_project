@@ -30,6 +30,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
+        public PlayerType pType;
+        private string type;
         private Camera m_Camera;
         private bool m_Jump;
         private float m_YRotation;
@@ -48,6 +50,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Use this for initialization
         private void Start()
         {
+            type = pType.playerType;
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
             m_OriginalCameraPosition = m_Camera.transform.localPosition;
@@ -67,7 +70,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             RotateView();
             // the jump state needs to read here to make sure it is not missed
-            if ((!m_Jump && m_CharacterController.isGrounded) || (!m_Jump && !double_jump && gameObject.CompareTag("Bloodhound")))
+            if ((!m_Jump && m_CharacterController.isGrounded) || (!m_Jump && !double_jump && type =="Bloodhound"))
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
@@ -240,7 +243,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             // set the desired speed to be walking or running
-            speed = (m_IsWalking && m_CharacterController.height == 1.8f) ? m_WalkSpeed : (m_CharacterController.height == 0.1f? m_CrouchSpeed : (gameObject.CompareTag("Bangalor") ? m_RunSpeed * 2: m_RunSpeed));
+            speed = (m_IsWalking && m_CharacterController.height == 1.8f) ? m_WalkSpeed : (m_CharacterController.height == 0.1f? m_CrouchSpeed : (type=="Bangalor" ? m_RunSpeed * 2: m_RunSpeed));
 
             //Debug.Log(speed);
 

@@ -1,10 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
 public class PlayerLogic : MonoBehaviour
 {
+    public PlayerType pType;
+    private string type;
     public int health;
     public int specialAbilitiesMeter;
     private float lastUpdate_SpecialAbilitiesMeter;
@@ -34,8 +35,9 @@ public class PlayerLogic : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Start()    
     {
+        type = pType.playerType;
         //- Diab stuff
         ppvol = mainCam.GetComponent<PostProcessVolume>();
         ppvol.profile.TryGetSettings(out cGrade);
@@ -82,7 +84,7 @@ public class PlayerLogic : MonoBehaviour
             if (!isPaused)
             {
                 // Disable Bangalore's special ability after 10 seconds
-                if(gameObject.CompareTag("Bangalor") && (Time.time - lastUpdate_BangalorSpecialAbilityActivated) >= 10.0f)
+                if(type == "Bangalor" && (Time.time - lastUpdate_BangalorSpecialAbilityActivated) >= 10.0f)
                 {
                     this.gameObject.transform.GetChild(0).GetChild(5).gameObject.SetActive(false);
                     shieldOn = false;
@@ -96,12 +98,12 @@ public class PlayerLogic : MonoBehaviour
                 }
 
                 // Activate special abilites
-                if (specialAbilitiesMeter == 100 && Input.GetKeyDown(KeyCode.Q) && !gameObject.CompareTag("Bloodhound"))
+                if (specialAbilitiesMeter == 100 && Input.GetKeyDown(KeyCode.Q) && type != "Bloodhound")
                 {
                     executeSpecialAbility();
                     specialAbilitiesMeter = 0;
                 }
-                else if (specialAbilitiesMeter == 100 && Input.GetKeyDown(KeyCode.Q) && gameObject.CompareTag("Bloodhound")){
+                else if (specialAbilitiesMeter == 100 && Input.GetKeyDown(KeyCode.Q) && type == "Bloodhound"){
                     if(carriedPrimaryWeapon!=null){
                         executeSpecialAbility();
                         specialAbilitiesMeter = 0;
@@ -253,7 +255,7 @@ public class PlayerLogic : MonoBehaviour
                     {
                         //besela: pick up animaton needed
                         Destroy(canPickUp.gameObject);
-                        if (gameObject.CompareTag("Loba"))
+                        if (type == "Loba")
                         {
                             secondaryAmmoCount = (secondaryAmmoCount + 2) > 10 ? 10 : (secondaryAmmoCount + 2);
                         }
@@ -324,18 +326,18 @@ public class PlayerLogic : MonoBehaviour
     private void executeSpecialAbility()
     {
 
-        if(gameObject.CompareTag("Loba"))
+        if(type == "Loba")
         {
             GameObject thrownBall = Instantiate(ball, startPoint.position, startPoint.rotation);
             thrownBall.GetComponent<Rigidbody>().velocity = startPoint.transform.up * 7.0f;
         }
-        else if(gameObject.CompareTag("Bangalor"))
+        else if(type == "Bangalor")
         {
             this.gameObject.transform.GetChild(0).GetChild(5).gameObject.SetActive(true);
             lastUpdate_BangalorSpecialAbilityActivated = Time.time;
             shieldOn = true;
         }
-        else if(gameObject.CompareTag("Bloodhound"))
+        else if(type == "Bloodhound")
         {
         goBW();
         Invoke(nameof(unBW), 10f);
