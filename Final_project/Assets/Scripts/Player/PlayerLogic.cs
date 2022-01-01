@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerLogic : MonoBehaviour
 {
@@ -8,13 +9,26 @@ public class PlayerLogic : MonoBehaviour
     public int specialAbilitiesMeter;
     private float lastUpdate_SpecialAbilitiesMeter;
     private Collider canPickUp;
-    private string selectedWeapon;
+    public bool pickingUp; // for animations
+    public string selectedWeapon;
     private string carriedPrimaryWeapon;
     private string carriedSecondaryWeapon;
     private int primaryAmmoCount;
     private int secondaryAmmoCount;
     private int noEnemyShot;
     private bool isGameOver, isPaused;
+    GameObject player;
+
+    //selected legend
+    string selectedCharacter;
+    GameObject playerModel;
+
+    //Animations
+    private Animator playerAnim;
+
+    //Scripts
+    PlayerAnimations playeraAnimScript;
+    FirstPersonController first_person_script;
 
     // Prehabs: to implement drop weapons logic
     public GameObject[] weapons = new GameObject[5];
@@ -24,6 +38,9 @@ public class PlayerLogic : MonoBehaviour
     //3 is Rifle
     //4 is Fire Grenade Launcher
 
+    //cameras
+    Camera firstPerson;
+    Camera thirdPerson;
 
 
     // Start is called before the first frame update
@@ -42,11 +59,33 @@ public class PlayerLogic : MonoBehaviour
         this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
         this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
         this.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(false);
+
+        // carriedPrimaryWeapon = null;
         carriedPrimaryWeapon = null;
         carriedSecondaryWeapon = null;
         selectedWeapon = null;
+        selectedCharacter = "Bloodhound"; //TODO: Change based on selected character
+
         primaryAmmoCount = 0;
         secondaryAmmoCount = 0;
+        pickingUp = false;
+
+        //get player
+        player = GameObject.Find("Player");
+        playerModel = GameObject.FindGameObjectWithTag(selectedCharacter);
+
+        //script init
+        first_person_script = player.GetComponent<FirstPersonController>();
+        playeraAnimScript = playerModel.GetComponent<PlayerAnimations>();
+
+        //animators init
+        playerAnim = playerModel.GetComponent<Animator>();
+
+        //cameras
+        firstPerson = first_person_script.m_Camera;
+        thirdPerson = GameObject.FindGameObjectWithTag("3rd Person").GetComponent<Camera>();
+        firstPerson.enabled = true;
+        thirdPerson.enabled = false;
     }
 
     // Update is called once per frame
@@ -80,156 +119,15 @@ public class PlayerLogic : MonoBehaviour
                 }
 
                 // Execute special ability
-                
-                    
+
+
 
                 //pick up logic
                 if (canPickUp != null && Input.GetKeyDown(KeyCode.E))
                 {
-                    if (canPickUp.gameObject.CompareTag("Health Pack"))
-                    {
-                        //besela: pick up animaton needed
-                        Destroy(canPickUp.gameObject);
-                        health = health + 25 > 100 ? 100 : health + 25;
-                        canPickUp = null;
-                    }
-                    else if (canPickUp.gameObject.CompareTag("Grenade Launcher") || canPickUp.gameObject.CompareTag("Fire Launcher"))
-                    {
-                        if (carriedSecondaryWeapon!=null)
-                        {
-                            //we must drop current secondary weapon first!
-                            //besela: drop animation needed
-                            GameObject gameObject;
-                            float x = canPickUp.gameObject.transform.position.x; 
-                            float y = canPickUp.gameObject.transform.position.y;
-                            float z = canPickUp.gameObject.transform.position.z;
-
-                            if (carriedSecondaryWeapon.Equals("Grenade Launcher"))
-                            {
-                                //drop grenade launcher
-                                gameObject = (GameObject) Instantiate(weapons[4]);
-                                gameObject.transform.SetParent(transform);
-                                gameObject.transform.position = new Vector3(x, y, z);
-                                this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
-                            }
-                            else if (carriedSecondaryWeapon.Equals("Fire Launcher"))
-                            {
-                                //drop grenade launcher
-                                gameObject = (GameObject)Instantiate(weapons[3]);
-                                gameObject.transform.SetParent(transform);
-                                gameObject.transform.position = new Vector3(x, y, z);
-                                this.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(false);
-                            }
-                        }
-                        //besela: pick up animaton needed
-                        Destroy(canPickUp.gameObject);
-                        if (canPickUp.gameObject.CompareTag("Grenade Launcher"))
-                        {
-                            //pick up grenade launcher
-                            carriedSecondaryWeapon = "Grenade Launcher";
-                            if (carriedPrimaryWeapon == null || !selectedWeapon.Equals(carriedPrimaryWeapon))
-                                //select weapon
-                                //besela: switching animaton needed
-                                selectedWeapon = carriedSecondaryWeapon;
-                                this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
-                        }
-                        else if (canPickUp.gameObject.CompareTag("Fire Launcher"))
-                        {
-                            //pick up fire launcher
-                            carriedSecondaryWeapon = "Fire Launcher";
-                            if (carriedPrimaryWeapon ==null || !selectedWeapon.Equals(carriedPrimaryWeapon))
-                                //select weapon
-                                //besela: switching animaton needed
-                                selectedWeapon = carriedSecondaryWeapon;
-                                this.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(true);
-                        }
-                        canPickUp = null;
-                    }
-                    else if (canPickUp.gameObject.CompareTag("Sniper") || canPickUp.gameObject.CompareTag("Shotgun") || canPickUp.gameObject.CompareTag("Rifle"))
-                    {
-                        if (carriedPrimaryWeapon != null)
-                        {
-                            //we must drop current primary weapon first!
-                            //besela: drop animation needed
-                            GameObject gameObject;
-                            float x = canPickUp.gameObject.transform.position.x;
-                            float y = canPickUp.gameObject.transform.position.y;
-                            float z = canPickUp.gameObject.transform.position.z;
-
-                            if (carriedPrimaryWeapon.Equals("Sniper"))
-                            {
-                                //drop Sniper
-                                gameObject = (GameObject)Instantiate(weapons[1]);
-                                gameObject.transform.SetParent(transform);
-                                gameObject.transform.position = new Vector3(x, y, z);
-                                this.gameObject.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
-                            }
-                            else if (carriedPrimaryWeapon.Equals("Shotgun"))
-                            {
-                                //drop Shotgun
-                                gameObject = (GameObject)Instantiate(weapons[2]);
-                                gameObject.transform.SetParent(transform);
-                                gameObject.transform.position = new Vector3(x, y, z);
-                                this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
-                            }
-                            else if (carriedPrimaryWeapon.Equals("Rifle"))
-                            {
-                                //drop Rifle
-                                gameObject = (GameObject)Instantiate(weapons[0]);
-                                gameObject.transform.SetParent(transform);
-                                gameObject.transform.position = new Vector3(x, y, z);
-                                this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
-                            }
-                        }
-                        //besela: pick up animaton needed
-                        Destroy(canPickUp.gameObject);
-                        if (canPickUp.gameObject.CompareTag("Sniper"))
-                        {
-                            //pick up Sniper
-                            carriedPrimaryWeapon = "Sniper";
-                            if (carriedSecondaryWeapon == null || !selectedWeapon.Equals(carriedSecondaryWeapon))
-                                //select weapon
-                                //besela: switching animaton needed
-                                selectedWeapon = carriedPrimaryWeapon;
-                                this.gameObject.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
-                        }
-                        else if (canPickUp.gameObject.CompareTag("Shotgun"))
-                        {
-                            //pick up grenade launcher
-                            carriedPrimaryWeapon = "Shotgun";
-                            if (carriedSecondaryWeapon == null || !selectedWeapon.Equals(carriedSecondaryWeapon))
-                                //select weapon
-                                //besela: switching animaton needed
-                                selectedWeapon = carriedPrimaryWeapon;
-                                this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(true);
-                        }
-                        else if (canPickUp.gameObject.CompareTag("Rifle"))
-                        {
-                            //pick up grenade launcher
-                            carriedPrimaryWeapon = "Rifle";
-                            if (carriedSecondaryWeapon == null || !selectedWeapon.Equals(carriedSecondaryWeapon))
-                                //select weapon
-                                //besela: switching animaton needed
-                                selectedWeapon = carriedPrimaryWeapon;
-                                this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
-                        }
-                        canPickUp = null;
-                    }
-                    else if (canPickUp.gameObject.CompareTag("Primary Ammo"))
-                    {
-                        //besela: pick up animaton needed
-                        Destroy(canPickUp.gameObject);
-                        primaryAmmoCount = (primaryAmmoCount + 50) > 150 ? 150 : (primaryAmmoCount + 50);
-                        canPickUp = null;
-                    }
-                    else if (canPickUp.gameObject.CompareTag("Secondary Ammo"))
-                    {
-                        //besela: pick up animaton needed
-                        Destroy(canPickUp.gameObject);
-                        secondaryAmmoCount = (secondaryAmmoCount + 2) > 5 ? 5 : (secondaryAmmoCount + 2);
-                        canPickUp = null;
-                    }
+                    StartCoroutine(pickUp());
                 }
+
                 //switch weapons logic
                 if (Input.GetKeyDown(KeyCode.Z) && carriedPrimaryWeapon!=null && carriedSecondaryWeapon!=null)
                 {
@@ -282,7 +180,182 @@ public class PlayerLogic : MonoBehaviour
                     }
                 }
             }
-            
+
+            //model crouch fix
+            if (first_person_script.m_Crouched)
+            {
+                playerModel.transform.position = new Vector3(playerModel.transform.position.x,
+                                                             player.transform.position.y - 0.4f,
+                                                             playerModel.transform.position.z);
+            }
+            else
+            {
+                playerModel.transform.position = new Vector3(playerModel.transform.position.x,
+                                                             player.transform.position.y - 0.98f,
+                                                             playerModel.transform.position.z);
+            }
+        }
+    }
+
+    private IEnumerator pickUp()
+    {
+
+        if (first_person_script.m_Crouched)
+        {
+            playerAnim.Play("Pick Up Crouching");
+            yield return new WaitForSeconds(1);
+            playerAnim.Play("Rifle Crouching Aiming Idle");
+        }
+        else
+        {
+            playerAnim.Play("Pick Up Standing");
+            yield return new WaitForSeconds(1.8f);
+            playerAnim.Play("Rifle Aiming Idle");
+        }
+
+
+        if (canPickUp.gameObject.CompareTag("Health Pack"))
+        {
+            //besela: pick up animaton needed
+            Destroy(canPickUp.gameObject);
+            health = health + 25 > 100 ? 100 : health + 25;
+            canPickUp = null;
+        }
+        else if (canPickUp.gameObject.CompareTag("Grenade Launcher") || canPickUp.gameObject.CompareTag("Fire Launcher"))
+        {
+            if (carriedSecondaryWeapon != null)
+            {
+                //we must drop current secondary weapon first!
+                //besela: drop animation needed
+                GameObject gameObject;
+                float x = canPickUp.gameObject.transform.position.x;
+                float y = canPickUp.gameObject.transform.position.y;
+                float z = canPickUp.gameObject.transform.position.z;
+
+                if (carriedSecondaryWeapon.Equals("Grenade Launcher"))
+                {
+                    //drop grenade launcher
+                    gameObject = (GameObject)Instantiate(weapons[4]);
+                    gameObject.transform.SetParent(transform);
+                    gameObject.transform.position = new Vector3(x, y, z);
+                    this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+                }
+                else if (carriedSecondaryWeapon.Equals("Fire Launcher"))
+                {
+                    //drop grenade launcher
+                    gameObject = (GameObject)Instantiate(weapons[3]);
+                    gameObject.transform.SetParent(transform);
+                    gameObject.transform.position = new Vector3(x, y, z);
+                    this.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(false);
+                }
+            }
+            //besela: pick up animaton needed
+            Destroy(canPickUp.gameObject);
+            if (canPickUp.gameObject.CompareTag("Grenade Launcher"))
+            {
+                //pick up grenade launcher
+                carriedSecondaryWeapon = "Grenade Launcher";
+                if (carriedPrimaryWeapon == null || !selectedWeapon.Equals(carriedPrimaryWeapon))
+                    //select weapon
+                    //besela: switching animaton needed
+                    selectedWeapon = carriedSecondaryWeapon;
+                this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
+            }
+            else if (canPickUp.gameObject.CompareTag("Fire Launcher"))
+            {
+                //pick up fire launcher
+                carriedSecondaryWeapon = "Fire Launcher";
+                if (carriedPrimaryWeapon == null || !selectedWeapon.Equals(carriedPrimaryWeapon))
+                    //select weapon
+                    //besela: switching animaton needed
+                    selectedWeapon = carriedSecondaryWeapon;
+                this.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(true);
+            }
+            canPickUp = null;
+        }
+        else if (canPickUp.gameObject.CompareTag("Sniper") || canPickUp.gameObject.CompareTag("Shotgun") || canPickUp.gameObject.CompareTag("Rifle"))
+        {
+            if (carriedPrimaryWeapon != null)
+            {
+                //we must drop current primary weapon first!
+                //besela: drop animation needed
+                GameObject gameObject;
+                float x = canPickUp.gameObject.transform.position.x;
+                float y = canPickUp.gameObject.transform.position.y;
+                float z = canPickUp.gameObject.transform.position.z;
+
+                if (carriedPrimaryWeapon.Equals("Sniper"))
+                {
+                    //drop Sniper
+                    gameObject = (GameObject)Instantiate(weapons[1]);
+                    gameObject.transform.SetParent(transform);
+                    gameObject.transform.position = new Vector3(x, y, z);
+                    this.gameObject.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+                }
+                else if (carriedPrimaryWeapon.Equals("Shotgun"))
+                {
+                    //drop Shotgun
+                    gameObject = (GameObject)Instantiate(weapons[2]);
+                    gameObject.transform.SetParent(transform);
+                    gameObject.transform.position = new Vector3(x, y, z);
+                    this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
+                }
+                else if (carriedPrimaryWeapon.Equals("Rifle"))
+                {
+                    //drop Rifle
+                    gameObject = (GameObject)Instantiate(weapons[0]);
+                    gameObject.transform.SetParent(transform);
+                    gameObject.transform.position = new Vector3(x, y, z);
+                    this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
+                }
+            }
+            //besela: pick up animaton needed
+            Destroy(canPickUp.gameObject);
+            if (canPickUp.gameObject.CompareTag("Sniper"))
+            {
+                //pick up Sniper
+                carriedPrimaryWeapon = "Sniper";
+                if (carriedSecondaryWeapon == null || !selectedWeapon.Equals(carriedSecondaryWeapon))
+                    //select weapon
+                    //besela: switching animaton needed
+                    selectedWeapon = carriedPrimaryWeapon;
+                this.gameObject.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
+            }
+            else if (canPickUp.gameObject.CompareTag("Shotgun"))
+            {
+                //pick up grenade launcher
+                carriedPrimaryWeapon = "Shotgun";
+                if (carriedSecondaryWeapon == null || !selectedWeapon.Equals(carriedSecondaryWeapon))
+                    //select weapon
+                    //besela: switching animaton needed
+                    selectedWeapon = carriedPrimaryWeapon;
+                this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(true);
+            }
+            else if (canPickUp.gameObject.CompareTag("Rifle"))
+            {
+                //pick up grenade launcher
+                carriedPrimaryWeapon = "Rifle";
+                if (carriedSecondaryWeapon == null || !selectedWeapon.Equals(carriedSecondaryWeapon))
+                    //select weapon
+                    //besela: switching animaton needed
+                    selectedWeapon = carriedPrimaryWeapon;
+                this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
+            }
+            canPickUp = null;
+        }
+        else if (canPickUp.gameObject.CompareTag("Primary Ammo"))
+        {
+            //besela: pick up animaton needed
+            Destroy(canPickUp.gameObject);
+            primaryAmmoCount = (primaryAmmoCount + 50) > 150 ? 150 : (primaryAmmoCount + 50);
+            canPickUp = null;
+        }
+        else if (canPickUp.gameObject.CompareTag("Secondary Ammo"))
+        {
+            //besela: pick up animaton needed
+            Destroy(canPickUp.gameObject);
+            secondaryAmmoCount = (secondaryAmmoCount + 2) > 5 ? 5 : (secondaryAmmoCount + 2);
+            canPickUp = null;
         }
     }
 
@@ -361,6 +434,10 @@ public class PlayerLogic : MonoBehaviour
     {
         // Gazara: music needed
         isGameOver = true;
+
+        //animation
+        thirdPersonAnim(false);
+
         // Batates: Game over menu
     }
 
@@ -384,8 +461,10 @@ public class PlayerLogic : MonoBehaviour
         health = health - amount < 0 ? 0: health - amount;
 
         // Whenever the player's health points reaches zero, the player dies
-        if (health == 0)
+        if (health <= 0)
+        {         
             gameOver();
+        }
 
     }
 
@@ -419,6 +498,19 @@ public class PlayerLogic : MonoBehaviour
     public void setSecondaryAmmoCount(int val)
     {
         secondaryAmmoCount = val < 0 ? 0 : val;
+    }
+
+    public void thirdPersonAnim(bool win)
+    {
+        firstPerson.enabled = false;
+        thirdPerson.enabled = true;
+        playerAnim.SetLayerWeight(1, 0);
+        playerAnim.applyRootMotion = true;
+
+        if(win)
+            playerAnim.Play("Celebrate");
+        else
+            playerAnim.Play("Die");
     }
 
 }

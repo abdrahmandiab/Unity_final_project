@@ -12,6 +12,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     public class FirstPersonController : MonoBehaviour
     {
         [SerializeField] private bool m_IsWalking;
+        [SerializeField] public bool m_Crouched; // for animations
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
         [SerializeField] private float m_CrouchSpeed;
@@ -30,7 +31,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
-        private Camera m_Camera;
+        public Camera m_Camera;
         private bool m_Jump;
         private float m_YRotation;
         private Vector2 m_Input;
@@ -59,6 +60,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             double_jump = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            m_Crouched = false;
         }
 
 
@@ -91,6 +93,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     m_CharacterController.height = 0.1f;
                 else
                     m_CharacterController.height = 1.8f;
+
+
+                m_Crouched = !m_Crouched;
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;

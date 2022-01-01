@@ -22,11 +22,13 @@ TagManager:
   - Loba
   - Bangalor
   - Bloodhound
+  - Hand
+  - 3rd Person
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ignore in First Person
   - Water
   - UI
   - 

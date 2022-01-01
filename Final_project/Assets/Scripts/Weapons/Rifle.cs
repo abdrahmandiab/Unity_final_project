@@ -24,6 +24,10 @@ public class Rifle : MonoBehaviour
     //VFX
     public GameObject muzzleFlash, bulletHoleGraphic;
     public Transform flashPoint;
+
+    //Animations
+    private Animator anim;
+
     //Bloodhound
     private float beastModeRad = 10f;
     public static float beastModeTime = 10f;
@@ -31,6 +35,7 @@ public class Rifle : MonoBehaviour
     void Start(){
         RateSeconds = 1/fireRate;
         bulletsLeft = maxAmmo;
+        anim = gameObject.GetComponent<Animator>();
     }
     void Update()
     {
@@ -81,8 +86,7 @@ public class Rifle : MonoBehaviour
         float y = Random.Range(-spread,spread);
         Vector3 temp = fps.transform.forward;
         Vector3 direction = temp + new Vector3(x,y,0);
-        
-        if(Physics.Raycast(fps.transform.position,direction,out hit, range)){
+        if (Physics.Raycast(fps.transform.position,direction,out hit, range)){
             //Debug.Log(hit.transform.name);
             if(hit.collider.CompareTag("Enemy")){
                 Destroy(hit.collider.gameObject);
@@ -94,6 +98,8 @@ public class Rifle : MonoBehaviour
                 Instantiate(bulletHoleGraphic,hit.point, Quaternion.Euler(-90,180,0));
             }
         }
+
+        anim.Play("rifle_bob");
     }
     void ShootAimBot(){
         Collider[] colliders = Physics.OverlapSphere(transform.position, beastModeRad);

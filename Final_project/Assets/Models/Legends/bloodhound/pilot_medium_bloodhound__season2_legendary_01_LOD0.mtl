@@ -1,0 +1,32 @@
+newmtl bloodhound_body_battleforged
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Ks 0.50 0.50 0.50
+map_Kd _images\0xfefc41c24a0a8d06.png
+map_bump _images\0xf655ad47eade690c.png
+map_Ks _images\0x65234a0ed1ef1999.png
+newmtl bloodhound_gauntlet_battleforged
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Ks 0.50 0.50 0.50
+map_Kd _images\0xffc9cf0fec5b1a51.png
+map_bump _images\0xf689587c99eb42d3.png
+map_Ks _images\0x6556f5437ac81d6f.png
+newmtl bloodhound_helmet_battleforged
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Ks 0.50 0.50 0.50
+map_Kd _images\0x9e09496b0e4e1bd0.png
+map_bump _images\0xb0b347f3685fce4c.png
+map_Ks _images\0x81d569f65bf5f09c.png
+newmtl bloodhound_jumpkit_battleforged
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Ks 0.50 0.50 0.50
+map_Kd _images\0xcabbaa265388e103.png
+map_bump _images\0x61fffdce8bf128b3.png
+map_Ks _images\0x1093ebb6c3353860.png
