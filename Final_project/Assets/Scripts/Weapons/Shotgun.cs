@@ -24,14 +24,16 @@ public class Shotgun : MonoBehaviour
     public Transform flashPoint;
     //BloodHound
     private float beastModeRad = 10f;
-    public static float beastModeTime = 10f;
-    public static float beastModeTimer;
+    public float beastModeTime = 10f;
+    public float beastModeTimer;
+    public LayerMask enemiesLayer;
     void Start(){
+        
+        RateSeconds = 1/fireRate;
         bulletsLeft = maxAmmo;
     }
     void Update()
     {
-        RateSeconds = 1/fireRate;
         if(reloading){
             if(Time.time >= reloadTimer){
                 reloading = false;
@@ -43,10 +45,10 @@ public class Shotgun : MonoBehaviour
         else{
             if(Time.time < beastModeTimer){
                 if(Time.time-lastFire> RateSeconds  ){
-                    Instantiate(muzzleFlash,flashPoint.position, Quaternion.identity);
                     lastFire = Time.time;
-                    Collider[] colliders = Physics.OverlapSphere(transform.position, beastModeRad);
+                    Collider[] colliders = Physics.OverlapSphere(transform.position, beastModeRad, enemiesLayer);
                     if(colliders.Length != 0){
+                        Instantiate(muzzleFlash,flashPoint.position, Quaternion.identity);
                         int randy = Random.Range(0,colliders.Length-1);
                         for(int i=0; i<n_pellets;i++){
                             ShootAimBot(colliders[randy]);   
@@ -107,12 +109,12 @@ public class Shotgun : MonoBehaviour
         
     }
     void ShootAimBot(Collider andy){
-        Debug.Log(andy.transform.name);
+        andy.gameObject.GetComponent<EnemyAI>().takeDamage(damage/n_pellets);
         //.GetComponent<Rigidbody>();
         // do takeDamage(damage/n_pellets).
         
     }
-    public static void goBeastMode(){
+    public void goBeastMode(){
         beastModeTimer = Time.time + beastModeTime;  
         Debug.Log("Beast Mode activated!");
     }

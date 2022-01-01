@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4000011227296186}
   - component: {fileID: 198000012944515248}
   - component: {fileID: 199000013307124530}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlashEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4712,7 +4712,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 527027c8baf2f0540be3104a3ec38a99, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

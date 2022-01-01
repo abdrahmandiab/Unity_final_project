@@ -131,7 +131,7 @@ public class EnemyAI : MonoBehaviour
     {
         //besela
 
-        //Destroy(gameObject);
+        Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()

@@ -23,6 +23,7 @@ TagManager:
   - Bangalor
   - Bloodhound
   - Thrown Object
+  - BldhndCam
   layers:
   - Default
   - TransparentFX
@@ -33,8 +34,8 @@ TagManager:
   - Ground
   - Bullet_Enemy
   - Enemy
-  - 
-  - 
+  - Terrain
+  - VFX
   - 
   - 
   - 

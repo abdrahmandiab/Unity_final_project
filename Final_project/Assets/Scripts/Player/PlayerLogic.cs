@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class PlayerLogic : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class PlayerLogic : MonoBehaviour
     private float lastUpdate_SpecialAbilitiesMeter;
     private float lastUpdate_BangalorSpecialAbilityActivated;
     private Collider canPickUp;
-    private string selectedWeapon;
-    private string carriedPrimaryWeapon;
+    public string selectedWeapon;
+    public string carriedPrimaryWeapon;
     private string carriedSecondaryWeapon;
     private int primaryAmmoCount;
     private int secondaryAmmoCount;
@@ -18,6 +19,10 @@ public class PlayerLogic : MonoBehaviour
     private bool isGameOver, isPaused, shieldOn;
     public GameObject ball;
     public Transform startPoint;
+
+    private PostProcessVolume ppvol;
+    private ColorGrading cGrade = null;
+    public GameObject mainCam;
     // Prehabs: to implement drop weapons logic
     public GameObject[] weapons = new GameObject[5];
     //0 is Grenade Launcher
@@ -31,6 +36,12 @@ public class PlayerLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //- Diab stuff
+        ppvol = mainCam.GetComponent<PostProcessVolume>();
+        ppvol.profile.TryGetSettings(out cGrade);
+
+
+
         // Health is initially set to 100
         health = 100;
         // Special abilities meter is initially empty and not updated
@@ -85,10 +96,18 @@ public class PlayerLogic : MonoBehaviour
                 }
 
                 // Activate special abilites
-                if (specialAbilitiesMeter == 100 && Input.GetKeyDown(KeyCode.Q))
+                if (specialAbilitiesMeter == 100 && Input.GetKeyDown(KeyCode.Q) && !gameObject.CompareTag("Bloodhound"))
                 {
                     executeSpecialAbility();
                     specialAbilitiesMeter = 0;
+                }
+                else if (specialAbilitiesMeter == 100 && Input.GetKeyDown(KeyCode.Q) && gameObject.CompareTag("Bloodhound")){
+                    if(carriedPrimaryWeapon!=null){
+                        executeSpecialAbility();
+                        specialAbilitiesMeter = 0;
+                    }else{
+                        Debug.Log("Equip a primary first!");
+                    }
                 }
 
                 //pick up logic
@@ -268,22 +287,22 @@ public class PlayerLogic : MonoBehaviour
                         this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
                         this.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(false);
                     }
-                    else if (selectedWeapon.Equals("Shotgun"))
+                    else if (selectedWeapon.Equals("Shotgun"))   // Weird shit happening, this turned to index 3 instead of 2 - DIAB
                     {
                         //select shotgun
                         this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
                         this.gameObject.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
-                        this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
-                        this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
+                        this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
+                        this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(true);
                         this.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(false);
                     }
-                    else if (selectedWeapon.Equals("Rifle"))
+                    else if (selectedWeapon.Equals("Rifle"))    // Weird shit happening, this turned to index 3 instead of 2 - DIAB
                     {
                         //select rifle
                         this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
                         this.gameObject.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
-                        this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
-                        this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(true);
+                        this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
+                        this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
                         this.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(false);
                     }
                     else if (selectedWeapon.Equals("Fire Launcher"))
@@ -304,6 +323,7 @@ public class PlayerLogic : MonoBehaviour
     // Special ability logic
     private void executeSpecialAbility()
     {
+
         if(gameObject.CompareTag("Loba"))
         {
             GameObject thrownBall = Instantiate(ball, startPoint.position, startPoint.rotation);
@@ -317,7 +337,10 @@ public class PlayerLogic : MonoBehaviour
         }
         else if(gameObject.CompareTag("Bloodhound"))
         {
+        goBW();
+        Invoke(nameof(unBW), 10f);
         selectedWeapon = carriedPrimaryWeapon;
+        // Debug.Log("Selected Weapon:" + selectedWeapon);
         if (selectedWeapon.Equals("Sniper")){
             //select sniper
             this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
@@ -326,33 +349,44 @@ public class PlayerLogic : MonoBehaviour
             this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
             this.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(false);
 
-            Sniper.goBeastMode();
+            this.gameObject.transform.GetChild(0).GetChild(1).gameObject.GetComponent<Sniper>().goBeastMode();
         }
         else if (selectedWeapon.Equals("Shotgun"))
         {
             //select shotgun
             this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
             this.gameObject.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
-            this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
-            this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
+            this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(true);
             this.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(false);
 
-            Shotgun.goBeastMode();
+            // Debug.Log("Shotgun Beast mode!");
+            this.gameObject.transform.GetChild(0).GetChild(3).gameObject.GetComponent<Shotgun>().goBeastMode();
         }
         else if (selectedWeapon.Equals("Rifle"))
         {
             //select rifle
             this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
             this.gameObject.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
-            this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
-            this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(true);
+            this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
+            this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(false);
             this.gameObject.transform.GetChild(0).GetChild(4).gameObject.SetActive(false);
-
-            Rifle.goBeastMode();
+            
+            // Debug.Log("Rifle Beast mode!");
+            this.gameObject.transform.GetChild(0).GetChild(2).gameObject.GetComponent<Rifle>().goBeastMode();
         }
 
         }
-        //IF ABILITY DURATION DONE (CODE STILL NOT IMPLEMENTED)
+        
+    }
+
+    // POST PROCESSING STUFF
+    public void goBW(){
+        cGrade.saturation.value = -100f;
+
+    }
+    public void unBW(){
+        cGrade.saturation.value = 0f;
     }
 
 

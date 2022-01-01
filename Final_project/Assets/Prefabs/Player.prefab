@@ -1,5 +1,79 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &543659466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 543659469}
+  - component: {fileID: 543659467}
+  m_Layer: 3
+  m_Name: BloodHoundCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &543659469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543659466}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 292181123322755237}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &543659467
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543659466}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 4
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.01
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 10
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 288
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &292181123322979461
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,6 +86,9 @@ GameObject:
   - component: {fileID: 292181123321210535}
   - component: {fileID: 292181123323640455}
   - component: {fileID: 292181123310712001}
+  - component: {fileID: 1424516333}
+  - component: {fileID: 1424516334}
+  - component: {fileID: 1424516335}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -27,8 +104,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292181123322979461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.72, y: 0.35, z: 0.695}
-  m_LocalScale: {x: 0.14250086, y: 0.14250086, z: 0.14250086}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8618026335000651793}
   - {fileID: 1684126313000898539}
@@ -37,6 +114,7 @@ Transform:
   - {fileID: 7789285044182225777}
   - {fileID: 8246107586950720194}
   - {fileID: 292181125389300757}
+  - {fileID: 543659469}
   m_Father: {fileID: 292181123322755239}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -99,6 +177,101 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292181123322979461}
   m_Enabled: 1
+--- !u!114 &1424516333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292181123322979461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 292181123322755237}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 769
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
+--- !u!114 &1424516334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292181123322979461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: cbae0d4551255f84f83d8f6b6a19ef17, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!114 &1424516335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292181123322979461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c520d478f3d2445429bd7ac9c92b03a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  postProcessLayer: {fileID: 0}
+  lightMeter: 0
+  histogram: 0
+  waveform: 0
+  vectorscope: 0
+  debugOverlay: 0
 --- !u!1 &292181123322979463
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,9 +286,10 @@ GameObject:
   - component: {fileID: 292181123326167015}
   - component: {fileID: 292181123323215207}
   - component: {fileID: 292181125334044278}
+  - component: {fileID: 1378906926}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Loba
+  m_TagString: Bloodhound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,16 +576,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 075c8202b2f259840ae807a71dce85a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 100
   specialAbilitiesMeter: 0
+  selectedWeapon: 
+  carriedPrimaryWeapon: 
   ball: {fileID: 3040753605304225382, guid: d3513a4ad2db761408b3f2651729ab79, type: 3}
   startPoint: {fileID: 292181125389300757}
+  mainCam: {fileID: 292181123322979461}
+  bldhndCam: {fileID: 543659467}
   weapons:
   - {fileID: 2707806639388122332, guid: 24859178d75944c4aa868b47e738c244, type: 3}
   - {fileID: 6883097502392933295, guid: 10b2f5db25f3047469a38f2b258230f0, type: 3}
   - {fileID: 8785450902561210049, guid: 48f6942aad2ba6e49a112bc52991dada, type: 3}
   - {fileID: 4808701031237887916, guid: dfe04777924210c47a319de590fc3b22, type: 3}
   - {fileID: 1791095448116518557, guid: 5a5ca19b496d19548b53248763979a54, type: 3}
+--- !u!136 &1378906926
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292181123322979463}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &292181125389300758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,7 +1565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8618026335000651793
 Transform:
   m_ObjectHideFlags: 0
@@ -1764,6 +1956,8 @@ MonoBehaviour:
   muzzleFlash: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
   bulletHoleGraphic: {fileID: 1000010844420130, guid: 4edabb1c0dde62743b137378c7d22980, type: 3}
   flashPoint: {fileID: 12392217776725161}
+  beastModeTime: 10
+  beastModeTimer: 0
 --- !u!1 &5035368806891556364
 GameObject:
   m_ObjectHideFlags: 0
@@ -2326,6 +2520,8 @@ MonoBehaviour:
   muzzleFlash: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
   bulletHoleGraphic: {fileID: 1000010844420130, guid: 4edabb1c0dde62743b137378c7d22980, type: 3}
   flashPoint: {fileID: 936755385638562233}
+  beastModeTime: 10
+  beastModeTimer: 0
 --- !u!1 &6517669773178086824
 GameObject:
   m_ObjectHideFlags: 0
@@ -2549,6 +2745,8 @@ MonoBehaviour:
   muzzleFlash: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
   bulletHoleGraphic: {fileID: 1000010844420130, guid: 4edabb1c0dde62743b137378c7d22980, type: 3}
   flashPoint: {fileID: 1902842928465616291}
+  beastModeTime: 10
+  beastModeTimer: 0
 --- !u!1 &6772997193131199030
 GameObject:
   m_ObjectHideFlags: 0
