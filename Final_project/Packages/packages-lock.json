@@ -65,11 +65,21 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
     "com.unity.mathematics": {
       "version": "1.2.1",
       "depth": 2,
       "source": "registry",
       "dependencies": {},
+=======
+    "com.unity.postprocessing": {
+      "version": "3.0.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0"
+      },
+>>>>>>> b09b7348e48f9e3425804acbb7e114c1ddf46849
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {

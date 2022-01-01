@@ -9,7 +9,7 @@ public class Rifle : MonoBehaviour
     private float lastFire;
 
     //Gun profile
-    public float damage = 10f;
+    public int damage = 10;
     public float range = 65f;
     public float fireRate = 10f;
     public int maxAmmo = 35;
@@ -30,8 +30,9 @@ public class Rifle : MonoBehaviour
 
     //Bloodhound
     private float beastModeRad = 10f;
-    public static float beastModeTime = 10f;
-    public static float beastModeTimer;
+    public float beastModeTime = 10f;
+    public float beastModeTimer;
+    public LayerMask enemiesLayer;
     void Start(){
         RateSeconds = 1/fireRate;
         bulletsLeft = maxAmmo;
@@ -51,7 +52,7 @@ public class Rifle : MonoBehaviour
                  if(Time.time-lastFire> RateSeconds  ){
                     lastFire = Time.time;
                     ShootAimBot();
-                    Instantiate(muzzleFlash,flashPoint.position, Quaternion.identity);
+                   
                  }
             }
             else{
@@ -89,7 +90,7 @@ public class Rifle : MonoBehaviour
         if (Physics.Raycast(fps.transform.position,direction,out hit, range)){
             //Debug.Log(hit.transform.name);
             if(hit.collider.CompareTag("Enemy")){
-                Destroy(hit.collider.gameObject);
+                hit.collider.gameObject.GetComponent<EnemyAI>().takeDamage(damage);
             }
             if (hit.collider.CompareTag("Wall")){
                 Instantiate(bulletHoleGraphic,hit.point, Quaternion.Euler(0,180,0));
@@ -102,14 +103,17 @@ public class Rifle : MonoBehaviour
         anim.Play("rifle_bob");
     }
     void ShootAimBot(){
-        Collider[] colliders = Physics.OverlapSphere(transform.position, beastModeRad);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, beastModeRad, enemiesLayer);
         if(colliders.Length != 0){
+            
             int randy = Random.Range(0,colliders.Length-1);
-            Debug.Log(colliders[randy].transform.name);
-            //.GetComponent<Rigidbody>();
+            if(colliders[randy].gameObject.tag == "Enemy" ){
+                Instantiate(muzzleFlash,flashPoint.position, Quaternion.identity);
+                colliders[randy].gameObject.GetComponent<EnemyAI>().takeDamage(damage);
+            }
         }
     }
-    public static void goBeastMode(){
+    public void goBeastMode(){
         beastModeTimer = Time.time + beastModeTime;  
         Debug.Log("Beast Mode activated!");
     }

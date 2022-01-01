@@ -1,0 +1,369 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1020106097714038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4403697114060852}
+  - component: {fileID: 114962413327544366}
+  m_Layer: 0
+  m_Name: FirstZoneCircle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4403697114060852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020106097714038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4447651875786208}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114962413327544366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020106097714038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453e7e1d8107e7d41b10daa08c2e556a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Radius: 61.25
+--- !u!1 &1046324369474618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4195454572064170}
+  - component: {fileID: 114809880045031808}
+  - component: {fileID: 114609868526896730}
+  m_Layer: 0
+  m_Name: Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4195454572064170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046324369474618}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4447651875786208}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114809880045031808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046324369474618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35c84fb07fd11147951d832a08f644e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StepsToEnd: 8
+  ResetupZoneCirclesOnStart: 0
+  StartupTheZoneOnStart: 1
+  LastZoneCircle:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 114028602684646536}
+  FirstZoneCircle:
+  - {fileID: 114962413327544366}
+  - {fileID: 0}
+  - {fileID: 0}
+  CurrentSafeZone:
+    Position: {x: -1, y: 0, z: -2.7}
+    Radius: 69.34984
+  NextSafeZone:
+    Position: {x: 9.369649, y: 0, z: -12.407052}
+    Radius: 47.716698
+  ZoneCircles:
+  - PositionAndRadius:
+      Position: {x: -1, y: 0, z: -2.7}
+      Radius: 69.34984
+    StartDelay: 20
+    ShrinkingTime: 32.44971
+    MoveSpeedRange: 1
+  - PositionAndRadius:
+      Position: {x: 9.369649, y: 0, z: -12.407052}
+      Radius: 47.716698
+    StartDelay: 20
+    ShrinkingTime: 23.357191
+    MoveSpeedRange: 1
+  - PositionAndRadius:
+      Position: {x: 16.833689, y: 0, z: -19.394156}
+      Radius: 32.145237
+    StartDelay: 20
+    ShrinkingTime: 15.925043
+    MoveSpeedRange: 1
+  - PositionAndRadius:
+      Position: {x: 21.922705, y: 0, z: -24.157997}
+      Radius: 21.528542
+    StartDelay: 20
+    ShrinkingTime: 10.153257
+    MoveSpeedRange: 1
+  - PositionAndRadius:
+      Position: {x: 25.167288, y: 0, z: -27.195257}
+      Radius: 14.759704
+    StartDelay: 20
+    ShrinkingTime: 6.041851
+    MoveSpeedRange: 1
+  - PositionAndRadius:
+      Position: {x: 27.098024, y: 0, z: -29.002625}
+      Radius: 10.731803
+    StartDelay: 20
+    ShrinkingTime: 3.5907784
+    MoveSpeedRange: 1
+  - PositionAndRadius:
+      Position: {x: 28.245497, y: 0, z: -30.076775}
+      Radius: 8.337951
+    StartDelay: 20
+    ShrinkingTime: 2.8001196
+    MoveSpeedRange: 1
+  - PositionAndRadius:
+      Position: {x: 29.140305, y: 0, z: -30.914408}
+      Radius: 6.4712043
+    StartDelay: 20
+    ShrinkingTime: 3.6290302
+    MoveSpeedRange: 1
+  - PositionAndRadius:
+      Position: {x: 30.3, y: 0, z: -32}
+      Radius: 4.051851
+    StartDelay: 20
+    ShrinkingTime: 0
+    MoveSpeedRange: 1
+  ZoneCirclesSizeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 3.0669181
+      outSlope: 3.0669181
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.000563
+      value: 1.0006306
+      inSlope: 0.38139075
+      outSlope: 0.38139075
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  Events:
+    AreaIsShrinking:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: UpdateZone
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 114609868526896730}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: ShowShrinkingTime
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    WaitingForShrinking:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114609868526896730}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: ShowWaitingTime
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    AreaStartShrinking:
+      m_PersistentCalls:
+        m_Calls: []
+    StartWaitingForShrinking:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: UpdateZone
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: UpdateZone
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    EndOfLastStep:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114609868526896730}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: EndOfLastStep
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  ShowStepsCircles: 1
+  ShowCurrentStepCircle: 0
+  ShowNextStepCircle: 0
+--- !u!114 &114609868526896730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046324369474618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 724f28f5efd9c1c44960de01177c0c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeText: {fileID: 0}
+--- !u!1 &1185391660640404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4563580706040742}
+  - component: {fileID: 114028602684646536}
+  m_Layer: 0
+  m_Name: LastZoneCircle (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4563580706040742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185391660640404}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2, y: 0, z: 38.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4447651875786208}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114028602684646536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185391660640404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453e7e1d8107e7d41b10daa08c2e556a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Radius: 4.051851
+--- !u!1 &1235321132287952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4447651875786208}
+  m_Layer: 0
+  m_Name: ZonePrefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4447651875786208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235321132287952}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4195454572064170}
+  - {fileID: 4403697114060852}
+  - {fileID: 4563580706040742}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -22,20 +22,29 @@ TagManager:
   - Loba
   - Bangalor
   - Bloodhound
+<<<<<<< HEAD
   - Hand
   - 3rd Person
+=======
+  - Thrown Object
+  - BldhndCam
+>>>>>>> b09b7348e48f9e3425804acbb7e114c1ddf46849
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
+<<<<<<< HEAD
   - Ignore in First Person
+=======
+  - Player
+>>>>>>> b09b7348e48f9e3425804acbb7e114c1ddf46849
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Bullet_Enemy
+  - Enemy
+  - Terrain
+  - VFX
   - 
   - 
   - 
